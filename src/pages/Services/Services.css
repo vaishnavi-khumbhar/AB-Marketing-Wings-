@@ -1,0 +1,669 @@
+/* ================= SERVICES HERO ================= */
+
+.services-hero{
+  position:relative;
+  padding:60px 0;
+  text-align:center;
+  overflow:hidden;
+  height: 410px;
+  background:linear-gradient(
+    135deg,
+    #13286d,
+    #0b2c66,
+    #0f4cc7
+  );
+  color:#fff;
+}
+
+/* Animated Glow Circles */
+
+.services-floating-circle{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(90px);
+  opacity:.35;
+  animation:servicesFloatGlow 8s ease-in-out infinite;
+}
+
+.services-circle1{
+  width:380px;
+  height:380px;
+  background:#ff6b00;
+  top:-120px;
+  left:-100px;
+}
+
+.services-circle2{
+  width:320px;
+  height:320px;
+  background:#00c3ff;
+  bottom:-120px;
+  right:-100px;
+}
+
+@keyframes servicesFloatGlow{
+  0%,100%{
+    transform:translateY(0) scale(1);
+  }
+  50%{
+    transform:translateY(30px) scale(1.1);
+  }
+}
+
+/* Content */
+
+.services-hero-content{
+  max-width:900px;
+  margin:auto;
+  animation:servicesFadeUp 1s ease forwards;
+}
+
+@keyframes servicesFadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.services-badge{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:50px;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.2);
+  margin-bottom:25px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.services-hero-content h1{
+  font-size:2.5rem;
+  font-weight:800;
+  line-height:1.1;
+}
+
+.services-hero-content h1 span{
+  display:block;
+  background:linear-gradient(
+    90deg,
+    #ffb400,
+    #ff6b00
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.services-hero-content p{
+  margin-top:25px;
+  font-size:1.2rem;
+  line-height:1.9;
+  opacity:.85;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+  .services-hero-content{
+    max-width:90%;
+  }
+
+  .services-hero-content h1{
+    font-size:3.5rem;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .services-hero{
+    height:auto;
+    min-height:320px;
+    padding:35px 20px 30px;
+  }
+
+  .services-hero-content{
+    max-width:100%;
+  }
+
+  .services-badge{
+    margin-bottom:12px;
+    padding:8px 16px;
+    font-size:.75rem;
+  }
+
+  .services-hero-content h1{
+    font-size:1.9rem;
+    line-height:1.15;
+    margin-bottom:12px;
+  }
+
+  .services-hero-content p{
+    margin-top:10px;
+    font-size:.9rem;
+    line-height:1.5;
+    max-width:95%;
+  }
+
+
+
+  .services-badge{
+    font-size:.85rem;
+    padding:10px 18px;
+  }
+
+  .services-hero-content h1{
+    font-size:2.5rem;
+    line-height:1.2;
+  }
+
+  .services-hero-content p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .services-hero-content h1{
+    font-size:2rem;
+  }
+
+  .services-hero-content p{
+    font-size:.95rem;
+  }
+
+  .services-badge{
+    font-size:.75rem;
+  }
+
+}
+
+
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-section {
+  position: relative;
+  padding: 110px 20px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #f8fbff,
+    #ffffff,
+    #fff3e8
+  );
+}
+
+/* DARK ORANGE BIG CIRCLE */
+.services-section::before {
+  content: "";
+  position: absolute;
+
+  top: -150px;
+  right: -150px;
+
+  width: 400px;
+  height: 400px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.35),
+    rgba(255, 107, 0, 0.05)
+  );
+
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* SECOND ORANGE CIRCLE */
+.services-section::after {
+  content: "";
+  position: absolute;
+
+  bottom: -120px;
+  left: -120px;
+
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.25),
+    rgba(255, 140, 0, 0.05)
+  );
+
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* content on top */
+.services-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.service-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+/* IMAGE */
+.service-img {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+/* ICON */
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: -35px auto 10px;
+  background: linear-gradient(135deg, #ff6a00, #ff8c42);
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE (BIGGER TEXT) */
+.service-card h4 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 12px;
+  color: #222;
+}
+
+/* DESCRIPTION (BIGGER TEXT) */
+.service-card p {
+  font-size: 16px;
+  color: #555;
+  padding: 0 18px 28px;
+  line-height: 1.7;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.service-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 25px 45px rgba(255, 106, 0, 0.25);
+}
+
+/* image zoom on hover */
+.service-card:hover .service-img img {
+  transform: scale(1.12);
+}
+
+/* icon pop effect */
+.service-card:hover .service-icon {
+  transform: scale(1.15);
+}
+
+.service-img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: linear-gradient(135deg, #fff3e8, #e8f0ff);
+  overflow: hidden;
+}
+
+/* blurred background layer */
+.service-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(20px);
+  transform: scale(1.2);
+}
+
+/* main image */
+.service-img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  z-index: 2;
+}
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .service-img {
+    height: 170px;
+  }
+
+  .service-card h4 {
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+/* WHY CHOOSE AB MARKETING */
+/* ================= WHY SECTION ================= */
+
+.why-section {
+  position: relative;
+  padding: 25px 0;
+  background: linear-gradient(135deg, #f7faff, #eef3ff);
+  overflow: hidden;
+}
+
+/* common circle style */
+.why-section::before,
+.why-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* BIG BLUE CIRCLE (top-right) */
+.why-section::before {
+  top: -140px;
+  right: -140px;
+  width: 380px;
+  height: 380px;
+
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.35),
+    rgba(59, 130, 246, 0.05)
+  );
+}
+
+/* MEDIUM BLUE CIRCLE (bottom-left) */
+.why-section::after {
+  bottom: -120px;
+  left: -120px;
+  width: 280px;
+  height: 280px;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.25),
+    rgba(37, 99, 235, 0.05)
+  );
+}
+.why-section .circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* 3rd circle */
+.why-section .c1 {
+  top: 40px;
+  left: 10%;
+  width: 120px;
+  height: 120px;
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* 4th circle */
+.why-section .c2 {
+  bottom: 60px;
+  right: 15%;
+  width: 160px;
+  height: 160px;
+  background: rgba(96, 165, 250, 0.18);
+}
+
+@keyframes floatGlow{
+  0%,100%{ transform: translateY(0px);}
+  50%{ transform: translateY(25px);}
+}
+
+/* TAG */
+.why-tag{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:50px;
+  background:rgba(79,70,229,0.1);
+  color:#4f46e5;
+  font-weight:600;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.why-section h2{
+  font-size:40px;
+  font-weight:800;
+  line-height:1.2;
+  margin-bottom:25px;
+  color:#111827;
+}
+
+.why-section h2 span{
+  color:#ff6a00;
+}
+
+/* FEATURES GRID */
+.why-features{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* CARD ITEM */
+.why-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 18px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius:14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition:0.3s ease;
+  cursor:pointer;
+}
+
+.why-item span{
+  font-size:20px;
+}
+
+.why-item p{
+  margin:0;
+  font-weight:500;
+  color:#374151;
+}
+
+.why-item:hover{
+  transform: translateX(10px);
+  background:#fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* IMAGE BOX */
+.why-img-box{
+  position:relative;
+  display:inline-block;
+  padding:20px;
+}
+
+.why-img-box img{
+  width:100%;
+  height: 100%;
+  max-width:380px;
+  border-radius:20px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+  animation: imgFloat 4s ease-in-out infinite;
+}
+
+@keyframes imgFloat{
+  0%,100%{ transform: translateY(0);}
+  50%{ transform: translateY(-12px);}
+}
+
+/* FLOATING CARDS */
+
+/* CTA */
+.services-cta {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background: #f6f8ff;
+  overflow: hidden;
+}
+
+/* ORANGE HALF CIRCLE (RIGHT SIDE) */
+.services-cta::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: -250px;
+
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.35),
+    rgba(255, 107, 0, 0.05)
+  );
+
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* SMALL ORANGE ACCENT */
+.services-cta::after {
+  content: "";
+  position: absolute;
+
+  bottom: -120px;
+  left: -120px;
+
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.25),
+    rgba(255, 140, 0, 0.05)
+  );
+
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* content above circles */
+.services-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.services-cta .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.services-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* simple clean button */
+.services-cta button {
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.services-cta button:hover {
+  background: #162d6a;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .services-cta h2 {
+    font-size: 2rem;
+  }
+
+  .services-cta p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 95px;
+  left: 30px;   /* 👈 LEFT SIDE */
+  z-index: 99999;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #ff6b00, #ff8f00);
+  color: white;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(255, 107, 0, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
