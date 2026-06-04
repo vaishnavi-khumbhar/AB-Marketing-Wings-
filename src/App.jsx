@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -15,7 +15,7 @@ import AiChatButton from "./components/AiChatButton/AiChatButton";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -32,7 +32,7 @@ function App() {
       <AiChatButton />
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

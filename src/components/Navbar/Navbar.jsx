@@ -61,7 +61,8 @@ function Navbar() {
 
           {/* LOGO */}
           <Link to="/" className="navbar-brand logo">
-            <img src="/ab_logo.png" alt="AB Marketing Wings" className="navbar-logo" />
+
+<img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" className="navbar-logo" />
             <span className="logo-text">AB Marketing Wings</span>
           </Link>
 

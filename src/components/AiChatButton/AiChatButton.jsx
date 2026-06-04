@@ -100,11 +100,9 @@ const AiChatButton = () => {
 
 
 <span className="hero-badge">
-  <img
-    src="/ab_logo_cropped.png"
-    alt="AB Marketing Wings"
-    className="hero-badge-logo"
-  />
+  
+  
+<img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" className="hero-badge-logo" />
   <strong>AB Marketing Wings</strong>
 </span>
 

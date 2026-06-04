@@ -190,7 +190,7 @@ function Services() {
       <div className="col-lg-6 text-center">
 
         <div className="why-img-box">
-          <img src="/ab_logo.png" alt="AB Marketing Wings" />
+        <img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" />
 
         </div>
 

@@ -304,10 +304,7 @@ function Home() {
 
       {/* Center Logo */}
       <div className="center-logo">
-        <img
-          src="/ab_logo.png"
-          alt="AB Marketing Wings"
-        />
+        <img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" />
       </div>
 
       {/* Stats Cards */}
