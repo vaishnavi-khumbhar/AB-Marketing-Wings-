@@ -34,6 +34,61 @@ function OurWork() {
     },
   ];
 
+  // our client logo
+ const clients = [
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Avicare.png`,
+    name: "Avicare",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Balaji Electronics.png`,
+    name: "Balaji Electronics",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Elite Landmarks.png`,
+    name: "Elite Landmarks",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Finance Direction.png`,
+    name: "Finance Direction",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Gavran Eggswala.png`,
+    name: "Gavran Eggswala",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Lifetime Number.png`,
+    name: "Lifetime Number",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Motion Solapur.png`,
+    name: "Motion Solapur",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Oviyas.png`,
+    name: "Oviyas",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Shipal Line.png`,
+    name: "Shipal Line",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Swami Software.png`,
+    name: "Swami Software",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Unity Hospital.png`,
+    name: "Unity Hospital",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Varad Clinic.png`,
+    name: "Varad Clinic",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Voltaic Electric.png`,
+    name: "Voltaic Electric",
+  },
+];
   return (
     <>
       {/* Hero */}
@@ -166,6 +221,30 @@ function OurWork() {
   </div>
 </section>
 
+
+
+
+{/* our client logos */}
+<section className="clients-section">
+  <h2 className="clients-title">Our Happy Clients</h2>
+
+  <div className="clients-slider">
+    <div className="slide-track">
+      {[...clients, ...clients].map((client, index) => (
+        <div className="client-item" key={index}>
+          <img
+            className="client-logo"
+            src={client.logo}
+            alt={client.name}
+          />
+          <div className="client-name">{client.name}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
       {/* Testimonials */}
 
      <section className="testimonial-section">
@@ -206,6 +285,14 @@ function OurWork() {
 
   </div>
 </section>
+
+
+
+
+
+
+
+
 
     
     </>

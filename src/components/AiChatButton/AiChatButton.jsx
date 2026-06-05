@@ -129,16 +129,19 @@ const AiChatButton = () => {
           </div>
 
           {/* Input */}
-          <div className="ai-input">
-            <input
-              type="text"
-              placeholder="Type message..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
+        <div className="ai-input">
+  <input
+    type="text"
+    placeholder="Type message..."
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    onKeyDown={(e) => e.key === "Enter" && handleSend()}
+  />
 
-            <button onClick={handleSend}>Send</button>
-          </div>
+  <button onClick={handleSend} className="send-btn">
+    ➜
+  </button>
+</div>
         </div>
       )}
     </>

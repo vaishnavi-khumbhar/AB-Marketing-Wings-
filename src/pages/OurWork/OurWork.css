@@ -836,3 +836,142 @@ margin-bottom:25px;
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+/* our client logo */
+.clients-title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 45px;
+  line-height: 1.2;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #2563eb,
+    #38bdf8
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  letter-spacing: -1px;
+}
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-title {
+    font-size: 30px;
+  }
+}
+.clients-section {
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.clients-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.clients-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.client-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0 12px; /* space कमी */
+}
+
+.client-item img {
+  width: 220px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.client-item img:hover {
+  transform: scale(1.05);
+}
+
+.client-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.client-name{
+  display:block;
+  margin-top:8px;
+  font-size:18px;
+  font-weight:700;
+  color:#2563eb;
+  text-align:center;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 30px;
+  }
+
+  .client-item {
+    margin: 0 8px;
+  }
+
+  .client-item img {
+    width: 150px;
+    height: 90px;
+  }
+
+  .client-name {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .client-item img {
+    width: 120px;
+    height: 75px;
+  }
+
+  .client-name {
+    font-size: 12px;
+  }
+
+  .slide-track {
+    animation-duration: 22s;
+  }
+}

@@ -19,6 +19,9 @@ import "swiper/css/pagination";
 
 import { FaWhatsapp } from "react-icons/fa";
 
+import { MdOutlineArrowOutward } from "react-icons/md";
+
+
 
 
 function Home() {
@@ -128,8 +131,7 @@ function Home() {
               {slides[current].subtitle}
             </p>
 
-            <div className="buttons">
-
+<div className="hero-buttons">
               {/* CONTACT BUTTON */}
               <button
                 className="btn primary pulse-btn"
@@ -355,99 +357,128 @@ function Home() {
 {/* 3. CASE STUDY (BEFORE vs AFTER) */}
 <section className="case-section" data-aos="fade-up">
   <div className="blue-blob blob1"></div>
-<div className="blue-blob blob2"></div>
+  <div className="blue-blob blob2"></div>
+
   <div className="container">
 
+    {/* SECTION HEADER */}
     <div className="case-header">
-      <span className="case-tag">Success Story</span>
-      <h2 className="case-title">What Our Work Speaks</h2>
+      <span className="case-tag">Growth Strategy</span>
+
+      <h2 className="case-title">
+        Our Digital Marketing Framework
+      </h2>
+
       <p className="case-subtitle">
-        Real businesses. Real growth. Real measurable results.
+        A powerful combination of Google Ads, Meta Ads, Content Creation,
+        UGC Video Shoots, Influencer Marketing and Social Media Management
+        designed to generate leads, increase visibility and accelerate business growth.
       </p>
     </div>
 
+    {/* CASE STUDY */}
     <div className="case-story" data-aos="zoom-in">
 
       <div className="clinic-logo">
         <img
           src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"
-          alt=""
+          alt="Varad Skincare Clinic"
         />
       </div>
 
       <h3>Case Study: Varad Skincare Clinic</h3>
 
       <p>
-        We partnered with <b>Varad Skincare Clinic, Aurangabad</b> to transform
-        their digital presence and drive real business growth through
+        We partnered with <b>Varad Skincare Clinic, Sambhaji Nagar</b> to
+        transform their digital presence and drive real business growth through
         Meta Ads, content marketing and strategic branding.
       </p>
 
+      {/* STRATEGY CARDS */}
       <div className="case-highlights">
 
         <div className="highlight-card">
-          🚀 100% Increase in Online Engagement
+          🎯 Google Ads Campaign Management
         </div>
 
         <div className="highlight-card">
-          📈 More Inquiries & Patient Footfall
+          🚀 Meta Ads Lead Generation
         </div>
 
         <div className="highlight-card">
-          ⭐ Strong Local Brand Positioning
+          🎬 UGC Video Shoot & Production
+        </div>
+
+        <div className="highlight-card">
+          📸 Creative Content Creation
+        </div>
+
+        <div className="highlight-card">
+          ⭐ Influencer Marketing
+        </div>
+
+        <div className="highlight-card">
+          📱 Social Media Management
         </div>
 
       </div>
 
       <p>
-        By combining storytelling, performance marketing and design,
-        we positioned the clinic as a trusted skincare brand.
+        By combining performance marketing, content creation, UGC videos,
+        influencer collaborations and strategic branding, we positioned
+        the clinic as a trusted skincare brand while generating consistent
+        engagement, inquiries and business growth.
       </p>
 
     </div>
 
+    {/* RESULTS */}
     <div className="vs-divider">
-      <span>BEFORE vs AFTER</span>
+      <span>RESULTS DELIVERED</span>
     </div>
 
     <div className="case-grid">
 
+      {/* BEFORE */}
       <div className="case-card before" data-aos="fade-right">
 
         <div className="status-icon">
           <img
             src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"
-            alt=""
+            alt="Before"
           />
         </div>
 
         <h3>Before</h3>
 
         <ul>
-          <li>Low Engagement</li>
-          <li>No Branding</li>
-          <li>Limited Reach</li>
-          <li>Few Leads</li>
+          <li>Low Brand Awareness</li>
+          <li>Limited Online Reach</li>
+          <li>Weak Social Media Presence</li>
+          <li>Low Patient Inquiries</li>
+          <li>No Structured Marketing Strategy</li>
         </ul>
 
       </div>
 
+      {/* AFTER */}
       <div className="case-card after" data-aos="fade-left">
 
         <div className="status-icon">
           <img
             src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
-            alt=""
+            alt="After"
           />
         </div>
 
         <h3>After</h3>
 
         <ul>
-          <li>100% Growth</li>
-          <li>Strong Brand Identity</li>
-          <li>High Reach</li>
-          <li>More Conversions</li>
+          <li>🚀 100% Increase in Online Engagement</li>
+          <li>📈 More Inquiries & Patient Footfall</li>
+          <li>⭐ Strong Local Brand Positioning</li>
+          <li>📱 Consistent Social Media Growth</li>
+          <li>💰 Better Lead Generation & Conversions</li>
         </ul>
 
       </div>
@@ -485,13 +516,19 @@ function Home() {
       <h3>Website Development</h3>
 
       <p>
+        Your website is your digital storefront.
         Modern, responsive and high-converting websites
         designed to elevate your business online.
       </p>
 
-      <Link to="/services" className="marketing-read-btn">
-        Read More →
-      </Link>
+    <Link
+  to="/services"
+  className="marketing-read-btn"
+  onClick={() => window.scrollTo(0, 0)}
+>
+  <span>Read More</span>
+  <MdOutlineArrowOutward className="btn-icon" />
+</Link>
 
     </div>
 
@@ -500,20 +537,24 @@ function Home() {
 
       <img
         src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800"
-        alt="SEO Optimization"
+        alt="Social Media Marketing"
         className="marketing-service-image"
       />
 
-      <h3>SEO Optimization</h3>
+      <h3>Social Media Marketing </h3>
 
       <p>
-        Rank higher on Google and attract quality traffic
-        with powerful SEO strategies.
-      </p>
+        Our team builds engaging content strategies across Instagram and more helping you grow trust, and audience engagement.
 
-      <Link to="/services" className="marketing-read-btn">
-        Read More →
-      </Link>
+      </p>
+<Link
+  to="/services"
+  className="marketing-read-btn"
+  onClick={() => window.scrollTo(0, 0)}
+>
+  <span>Read More</span>
+  <MdOutlineArrowOutward className="btn-icon" />
+</Link>
 
     </div>
 
@@ -533,9 +574,14 @@ function Home() {
         and audience-focused campaigns.
       </p>
 
-      <Link to="/services" className="marketing-read-btn">
-        Read More →
-      </Link>
+    <Link
+  to="/services"
+  className="marketing-read-btn"
+  onClick={() => window.scrollTo(0, 0)}
+>
+  <span>Read More</span>
+  <MdOutlineArrowOutward className="btn-icon" />
+</Link>
 
     </div>
 
@@ -555,9 +601,14 @@ function Home() {
         strategic Meta & Google Ads campaigns.
       </p>
 
-      <Link to="/services" className="marketing-read-btn">
-        Read More →
-      </Link>
+     <Link
+  to="/services"
+  className="marketing-read-btn"
+  onClick={() => window.scrollTo(0, 0)}
+>
+  <span>Read More</span>
+  <MdOutlineArrowOutward className="btn-icon" />
+</Link>
 
     </div>
 

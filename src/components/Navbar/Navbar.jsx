@@ -12,6 +12,15 @@ import {
 } from "react-icons/fa";
 
 function Navbar() {
+
+  const closeMenu = () => {
+    const menu = document.getElementById("menu");
+
+    if (window.innerWidth < 992 && menu) {
+      menu.classList.remove("show");
+    }
+  };
+
   return (
     <>
       {/* TOP BAR */}
@@ -19,6 +28,7 @@ function Navbar() {
         <div className="container topbar-content">
 
           <div className="top-left">
+
             <span>
               <FaPhoneAlt /> +91 70585 27549
             </span>
@@ -30,23 +40,40 @@ function Navbar() {
             <span>
               <FaClock /> Mon - Sat (10 AM - 7 PM)
             </span>
+
           </div>
 
           <div className="top-right">
 
-            <a href="https://www.instagram.com/abmarketingwings/" target="_blank">
+            <a
+              href="https://www.instagram.com/abmarketingwings/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61583328312980" target="_blank">
+            <a
+              href="https://www.facebook.com/profile.php?id=61583328312980"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
 
-            <a href="https://www.linkedin.com/company/a-b-marketing-wings/" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/a-b-marketing-wings/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
 
-            <a href="https://wa.me/917058527549" target="_blank">
+            <a
+              href="https://wa.me/917058527549"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp />
             </a>
 
@@ -60,10 +87,20 @@ function Navbar() {
         <div className="container">
 
           {/* LOGO */}
-          <Link to="/" className="navbar-brand logo">
+          <Link
+            to="/"
+            className="navbar-brand logo"
+            onClick={closeMenu}
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}ab_logo.png`}
+              alt="AB Marketing Wings"
+              className="navbar-logo"
+            />
 
-<img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" className="navbar-logo" />
-            <span className="logo-text">AB Marketing Wings</span>
+            <span className="logo-text">
+              AB Marketing Wings
+            </span>
           </Link>
 
           {/* TOGGLER */}
@@ -72,39 +109,71 @@ function Navbar() {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
           {/* MENU */}
-          <div className="collapse navbar-collapse justify-content-end" id="menu">
-
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="menu"
+          >
             <ul className="navbar-nav">
 
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link
+                  className="nav-link"
+                  to="/"
+                  onClick={closeMenu}
+                >
+                  Home
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <Link
+                  className="nav-link"
+                  to="/about"
+                  onClick={closeMenu}
+                >
+                  About
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
+                <Link
+                  className="nav-link"
+                  to="/services"
+                  onClick={closeMenu}
+                >
+                  Services
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/ourwork">Our Work</Link>
+                <Link
+                  className="nav-link"
+                  to="/ourwork"
+                  onClick={closeMenu}
+                >
+                  Our Work
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link btn-contact" to="/contact">
+                <Link
+                  className="nav-link btn-contact"
+                  to="/contact"
+                  onClick={closeMenu}
+                >
                   Contact Us
                 </Link>
               </li>
 
             </ul>
-
           </div>
 
         </div>

@@ -163,94 +163,67 @@
    BUTTONS
 ========================== */
 
-.buttons {
-  margin-top: 35px;
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-/* Primary */
-
-.primary {
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(
-    135deg,
-    #ff7a00,
-    #ff4d00
-  );
-
-  color: #fff;
-
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
   border: none;
-
-  padding: 15px 30px;
-
-  border-radius: 50px;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  transition: all 0.4s ease;
-
-  box-shadow: 0 10px 25px rgba(255, 122, 0, 0.3);
+  white-space: nowrap;
 }
 
-.primary::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: -120%;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(255, 255, 255, 0.25);
-
-  transform: skewX(-25deg);
+/* PRIMARY BUTTON */
+.btn.primary {
+  background: linear-gradient(135deg, #ff6b00, #ff8f00);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(255, 107, 0, 0.25);
 }
 
-.primary:hover::before {
-  left: 120%;
-  transition: 0.8s;
-}
-
-.primary:hover {
+.btn.primary:hover {
   transform: translateY(-5px);
-
-  box-shadow: 0 18px 35px rgba(255, 122, 0, 0.5);
+  box-shadow: 0 15px 35px rgba(255, 107, 0, 0.35);
 }
 
-/* Secondary */
-
-.outline {
-  background: rgba(255, 255, 255, 0.1);
-
+/* OUTLINE BUTTON (FIXED VISIBILITY) */
+.btn.outline {
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  color: white;
-
-  padding: 15px 30px;
-
-  border-radius: 50px;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
 }
 
-.outline:hover {
-  background: rgba(255, 255, 255, 0.18);
+.btn.outline:hover {
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-5px);
 }
+/* button container (add class if possible) */
+.hero-buttons {
+  display: flex;
+  gap: 20px;  
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
+/* mobile fix */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn {
+    width: fit-content;
+    min-width: 200px;
+    padding: 12px 20px;
+  }
+}
 /* ==========================
    IMAGE SIDE
 ========================== */
@@ -355,50 +328,121 @@
   }
 }
 
+
 /* popup code */
-.image-card{
-  position:relative;
+.image-card {
+  position: relative;
+  display: inline-block;
 }
 
-.floating-card{
-  position:absolute;
-  background:#fff;
-  color:#222;
-  padding:12px 18px;
-  border-radius:15px;
-  font-weight:600;
-  font-size:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,.15);
-  animation:floatCard 3s infinite ease-in-out;
+.hero-icon {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
 }
 
-.leads-card{
-  top:20%;
-  left:-40px;
+.floating-card {
+  position: absolute;
+  z-index: 999;
+
+  background: #ffffff;
+  color: #222222;
+
+  padding: 12px 18px;
+  border-radius: 15px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+  animation: floatCard 3s infinite ease-in-out;
 }
 
-.roi-card{
-  top:60%;
-  right:-20px;
+.leads-card {
+  top: 15%;
+  left: -30px;
 }
 
-.client-card{
-  bottom:10%;
-  left:20px;
+.roi-card {
+  top: 55%;
+  right: -30px;
 }
 
-@keyframes floatCard{
-  0%{
-    transform:translateY(0);
+.client-card {
+  bottom: 10%;
+  left: 20px;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .floating-card {
+    font-size: 11px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    white-space: nowrap;
   }
-  50%{
-    transform:translateY(-10px);
+
+  .leads-card {
+    top: 10%;
+    left: 0;
   }
-  100%{
-    transform:translateY(0);
+
+  .roi-card {
+    top: 55%;
+    right: 0;
+  }
+
+  .client-card {
+    bottom: 5%;
+    left: 10px;
   }
 }
 
+/* Extra Small Devices */
+@media (max-width: 480px) {
+
+  .floating-card {
+    font-size: 10px;
+    padding: 7px 10px;
+  }
+
+  .leads-card {
+    top: 5%;
+    left: 0;
+  }
+
+  .roi-card {
+    top: 50%;
+    right: 0;
+  }
+
+  .client-card {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 
 
@@ -1138,7 +1182,7 @@
 
 
 
-/* 4. services */
+/* 4. experties */
 .services-grid {
   padding: 70px 20px;
   position: relative;
@@ -1332,48 +1376,102 @@
 
 /* Desktop */
 .marketing-read-btn {
-  margin: 0 20px 25px;
-  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
+  gap: 10px;
+
+  margin: 0 20px 25px;
+  padding: 14px 32px;
+
+  min-width: 190px;
+  width: fit-content;
+
   border-radius: 50px;
-  font-weight: 600;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5,
+    #7c3aed
+  );
+
+  box-shadow:
+    0 12px 30px rgba(79, 70, 229, 0.35),
+    0 5px 15px rgba(37, 99, 235, 0.2);
+
+  transition: all 0.4s ease;
+}
+
+/* Shine Effect */
+.marketing-read-btn::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.marketing-read-btn:hover::before {
+  left: 120%;
+}
+
+/* Icon */
+.btn-icon {
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.marketing-read-btn:hover .btn-icon {
+  transform: translate(4px, -4px);
+}
+
+/* Hover */
+.marketing-read-btn:hover {
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(135deg, #5777bd, #8a60d1);
-  width: fit-content;
-  min-width: 180px;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 40px rgba(79, 70, 229, 0.45),
+    0 10px 25px rgba(37, 99, 235, 0.25);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .marketing-read-btn {
-    width: calc(100% - 40px);
-    margin: 0 20px 20px;
-    padding: 12px 20px;
-    font-size: 14px;
-    min-width: unset;
-  }
-}
-@media (max-width: 768px) {
-  .marketing-read-btn {
-    width: 160px;
     margin: 0 auto 20px;
+    min-width: 170px;
+    padding: 12px 24px;
+    font-size: 14px;
   }
-}
-.marketing-read-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
-}
 
-.marketing-read-btn::after {
-  content: " →";
-  transition: 0.3s;
-}
-
-.marketing-read-btn:hover::after {
-  margin-left: 6px;
+  .btn-icon {
+    font-size: 18px;
+  }
 }
 
 /* ===== Mobile ===== */

@@ -18,56 +18,56 @@ function Services() {
     image:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
     icon:<FaBullhorn />,
     title:"Digital Marketing",
-    desc:"Data-driven marketing strategies that increase visibility and generate quality leads.",
+    desc:"We create result-driven digital marketing strategies that increase visibility, generate leads, and maximize ROI.Our expertise in SEO, PPC, and content marketing ensures your brand reaches the right audience at the right time.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
     icon:<FaLaptopCode />,
     title:"Website Development",
-    desc:"Responsive, modern and SEO-friendly websites designed to convert visitors.",
+    desc:"Your website is your digital storefront.We build fast, responsive, SEO-optimized websites designed to rank higher on Google and convert visitors into customers.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200",
     icon:<FaSearch />,
-    title:"SEO Optimization",
-    desc:"Improve rankings, traffic and visibility with powerful SEO techniques.",
+    title:"Social Media Marketing ",
+    desc:"We turn brands into conversations.Our team builds engaging content strategies across Instagram, Facebook, LinkedIn, and more  helping you grow visibility, trust, and audience engagement.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200",
     icon:<FaPaintBrush />,
     title:"Branding & Design",
-    desc:"Build memorable brand identities through creative design and storytelling.",
+    desc:"Your brand is your first impression, we make it unforgettable.From logo design to complete brand identity, we create visually compelling and emotionally engaging brand experiences.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200",
     icon:<FaVideo />,
     title:"Video Editing",
-    desc:"Create engaging reels, ads and YouTube content that attracts attention.",
+    desc:"We create scroll-stopping content that converts.From Reels to YouTube videos, our editing brings your brand story to life with cinematic quality and high engagement.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=1200",
     icon:<FaFacebook />,
     title:"Social Media Marketing",
-    desc:"Grow your audience and engagement through strategic social campaigns.",
+    desc:"We turn brands into conversations.Our team builds engaging content strategies across Instagram, Facebook, LinkedIn, and more  helping you grow visibility, trust, and audience engagement.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200",
     icon:<FaGoogle />,
     title:"Google Ads / PPC",
-    desc:"Reach customers actively searching for your products and services.",
+    desc:"Reach customers actively searching for your services.Our Google Ads experts create high-converting campaigns that boost traffic, generate leads, and maximize returns.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200",
     icon:<FaChartLine />,
     title:"Lead Generation",
-    desc:"Generate quality leads and convert prospects into loyal customers.",
+    desc:"We connect your business with ready-to-buy customers.Using funnels, landing pages, and automation, we turn interest into revenue and help you scale sustainably.",
   },
 ];
   return (
@@ -110,19 +110,17 @@ function Services() {
     <div className="row g-4">
 
       {services.map((service, index) => (
-        <div className="col-lg-3 col-md-6" key={index}>
+        <div className="col-lg-4 col-md-6" key={index}>
 
           <div className="service-card">
 
-            {/* IMAGE */}
-           <div className="service-img">
-  <img
-    src={service.image}
-    alt={service.title}
-  />
-</div>
+            <div className="service-img">
+              <img
+                src={service.image}
+                alt={service.title}
+              />
+            </div>
 
-            {/* ICON */}
             <div className="service-icon">
               {service.icon}
             </div>
@@ -140,7 +138,7 @@ function Services() {
   </div>
 </section>
 
-      {/* Why Choose Us */}
+     {/* Why Choose Us */}
 <section className="why-section">
 
   <div className="why-bg-circle why-bg1"></div>
@@ -150,48 +148,81 @@ function Services() {
 
     <div className="row align-items-center">
 
+      {/* LEFT CONTENT */}
       <div className="col-lg-6">
 
         <span className="why-tag">WHY CHOOSE US</span>
 
         <h2>
-           <span>Why Choose AB Marketing Wings?</span>
+          <span>Why Choose AB Marketing Wings?</span>
         </h2>
+
+        <p className="why-description">
+          We help brands grow through innovative digital marketing,
+          creative storytelling and performance-driven strategies.
+       
+        </p>
 
         <div className="why-features">
 
           <div className="why-item">
-            <span>🚀</span><p>Customized Marketing Strategy</p>
+            <span>🎯</span>
+            <div>
+              <h5>Tailored Solutions For Every Brand</h5>
+              <p>
+                No two businesses are the same. We create customized
+                digital marketing strategies aligned with your goals.
+                
+              </p>
+            </div>
           </div>
 
           <div className="why-item">
-            <span>📈</span><p>ROI Driven Campaigns</p>
+            <span>📈</span>
+            <div>
+              <h5>ROI-Driven Approach</h5>
+              <p>
+                Every campaign is built to generate measurable results,
+                ensuring your marketing investment translates into
+                real business growth.
+              </p>
+            </div>
           </div>
 
           <div className="why-item">
-            <span>🤖</span><p>AI Powered Marketing Solutions</p>
+            <span>🤖</span>
+            <div>
+              <h5>AI-Powered Marketing Strategies</h5>
+              <p>
+                We leverage AI tools and advanced analytics to optimize
+                campaigns, improve targeting and maximize performance.
+              </p>
+            </div>
           </div>
 
           <div className="why-item">
-            <span>📊</span><p>Transparent Reporting</p>
-          </div>
-
-          <div className="why-item">
-            <span>🎯</span><p>Dedicated Support Team</p>
-          </div>
-
-          <div className="why-item">
-            <span>🔥</span><p>Creative + Performance Approach</p>
+            <span>🚀</span>
+            <div>
+              <h5>Always Ahead Of The Market Curve</h5>
+              <p>
+                Trends change fast and we move faster. Our team stays
+                updated with the latest platforms, technologies.
+              </p>
+            </div>
           </div>
 
         </div>
+
       </div>
 
+      {/* RIGHT IMAGE */}
       <div className="col-lg-6 text-center">
 
         <div className="why-img-box">
-        <img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" />
-
+          <img
+            src={`${import.meta.env.BASE_URL}ab_logo.png`}
+            alt="AB Marketing Wings"
+          />
         </div>
 
       </div>
