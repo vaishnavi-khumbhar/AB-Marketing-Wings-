@@ -192,6 +192,8 @@
   position: relative;
   overflow: hidden;
   background: #f8f4f1; /* faint orange background */
+    padding-top: 60px;
+  padding-bottom: 80px;
 }
 
 /* base layer */
@@ -274,6 +276,88 @@
 .portfolio-card:hover .portfolio-overlay {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+
+  .section-title {
+    margin-bottom: 30px !important;
+  }
+}
+
+
+/* heding for our work spek itself */
+.section-title {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b00,
+    #ff9800,
+    #ffd700
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+
+  width: 80px;
+  height: 4px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #ff6b00,
+    #ff9800
+  );
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.9;
+
+  color: #64748b;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin-top: 25px;
+}
+@media (max-width: 768px) {
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section-title p {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+
+}
+
+
 
 .case-study {
   padding: 100px 0;

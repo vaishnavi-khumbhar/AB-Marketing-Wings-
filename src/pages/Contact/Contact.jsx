@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -11,8 +10,9 @@ import {
   FaLinkedinIn,
   FaClock,
 } from "react-icons/fa";
-
 import { motion } from "framer-motion";
+
+emailjs.init("ttpt2F7B9_vK1v1GV");
 
 const contactData = [
   { icon: <FaPhoneAlt />, title: "Call Us", value: "+91 70585 27549" },
@@ -67,25 +67,20 @@ function Contact() {
 
     try {
       await emailjs.send(
-        "service_i0ya73g",
-        "template_555zw95",
+        "service_zgagkyp",
+        "template_kfzj0zh",
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
           name: formData.name,
           email: formData.email,
-        },
-        "o7_p0pHVRnQ8WON8g"
+          phone: formData.phone,
+          message: formData.message,
+        }
       );
-      setSuccess("Message Sent Successfully! We will contact you shortly.");
-      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
       console.error("EmailJS Error:", err);
+    } finally {
       setSuccess("Message Sent Successfully! We will contact you shortly.");
       setFormData({ name: "", email: "", phone: "", message: "" });
-    } finally {
       setLoading(false);
     }
   };

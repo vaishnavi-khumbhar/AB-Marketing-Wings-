@@ -17,8 +17,8 @@ function Footer() {
   return (
     <footer className="footer">
 
-<div className="container-fluid px-4">
-          <div className="row">
+      <div className="container-fluid px-4">
+        <div className="row">
 
           {/* Company Info */}
           <div className="col-lg-4 col-md-6 mb-4">
@@ -34,22 +34,19 @@ function Footer() {
 
             <div className="footer-social">
 
-              <a href="https://www.instagram.com/abmarketingwings/" target="_blank">
+              <a href="https://www.instagram.com/abmarketingwings/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
 
-              <a href="https://www.facebook.com/profile.php?id=61583328312980" target="_blank">
+              <a href="https://www.facebook.com/profile.php?id=61583328312980" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </a>
 
-              <a href="https://www.linkedin.com/company/a-b-marketing-wings/" target="_blank">
+              <a href="https://www.linkedin.com/company/a-b-marketing-wings/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn />
               </a>
 
-              <a
-                href="https://wa.me/917058527549"
-                target="_blank"
-              >
+              <a href="https://wa.me/917058527549" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp />
               </a>
 
@@ -78,11 +75,11 @@ function Footer() {
             <h4>Services</h4>
 
             <ul>
-              <li>Digital Marketing</li>
-              <li>Social Media Marketing</li>
-              <li>SEO Optimization</li>
-              <li>Website Development</li>
-              <li>Branding & Design</li>
+              <li><Link to="/services">Digital Marketing</Link></li>
+              <li><Link to="/services">Social Media Marketing</Link></li>
+              <li><Link to="/services">SEO Optimization</Link></li>
+              <li><Link to="/services">Website Development</Link></li>
+              <li><Link to="/services">Branding &amp; Design</Link></li>
             </ul>
 
           </div>
@@ -96,12 +93,16 @@ function Footer() {
 
               <li>
                 <FaPhoneAlt className="icon" />
-                +91 70585 27549
+                <a href="tel:+917058527549" className="contact-link">
+  70585 27549
+</a>
               </li>
 
               <li>
                 <FaEnvelope className="icon" />
-                abmarketingwings@gmail.com
+               <a href="mailto:abmarketingwings@gmail.com" className="contact-link">
+  abmarketingwings@gmail.com
+</a>
               </li>
 
               <li>

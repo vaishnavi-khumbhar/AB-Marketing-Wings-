@@ -102,61 +102,75 @@ function About() {
       </section>
 
       {/* About Company */}
-      <section className="ab-about-company">
- <div className="blue-circle-1"></div>
+   <section className="ab-about-company">
+  <div className="blue-circle-1"></div>
   <div className="blue-circle-2"></div>
 
-        <div className="container">
+  <div className="container">
+    <div className="row align-items-center">
 
-          <div className="row align-items-center">
+      {/* Heading */}
+      <div className="col-12 order-1 d-lg-none text-center">
+        <span className="ab-section-tag">
+          ABOUT US
+        </span>
 
-            <div className="col-lg-6">
+        <h2>
+          Empowering Brands Through Advertising, Branding & Marketing
+        </h2>
+      </div>
 
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
-                alt="Marketing Team"
-                className="ab-about-img"
-              />
+      {/* Image */}
+      <div className="col-lg-6 order-2 order-lg-1">
+        <img
+          src={`${import.meta.env.BASE_URL}CEO.jpeg`}
+          alt="CEO Services by AB Marketing Wings"
+          className="ab-about-img"
+        />
+      </div>
 
-            </div>
+      {/* Content */}
+      <div className="col-lg-6 order-3 order-lg-2">
 
-            <div className="col-lg-6">
+        {/* Desktop Heading */}
+        <div className="d-none d-lg-block">
+          <span className="ab-section-tag">
+            ABOUT US
+          </span>
 
-              <span className="ab-section-tag">
-                ABOUT US
-              </span>
-
-              <h2>
-                Crafting Digital Success Stories Since Day One
-              </h2>
-
-              <p>
-                Every brand has a story, but only a few truly make an impact.
-                At AB Marketing Wings, we transform your brand story into
-                a powerful digital presence that influences decisions,
-                builds trust, and drives measurable business growth.
-              </p>
-
-              <p>
-                As a leading digital marketing agency in Pune,
-                we combine creativity, performance marketing,
-                and data-driven strategies to help businesses
-                scale faster, smarter and stronger.
-              </p>
-
-              <div className="ab-growth-points">
-                <div>✔ Build Strong Visibility</div>
-                <div>✔ Generate High-Quality Leads</div>
-                <div>✔ Drive Measurable Growth</div>
-              </div>
-
-            </div>
-
-          </div>
-
+          <h2>
+            Empowering Brands Through Advertising, Branding & Marketing
+          </h2>
         </div>
 
-      </section>
+        <p>
+          At AB Marketing Wings, we believe every business deserves a strong
+          and memorable brand identity. We specialize in creating impactful
+          advertising campaigns, strategic branding solutions, and result-driven
+          marketing strategies that help businesses connect with their target
+          audience and stand out in a competitive market.
+        </p>
+
+        <p>
+          Based in Pune, our team combines creativity, innovation, and
+          data-driven insights to deliver powerful digital and offline
+          marketing solutions.
+        </p>
+
+        <div className="ab-growth-points">
+          <div>✔ Creative Advertising Campaigns</div>
+          <div>✔ Professional Branding Solutions</div>
+          <div>✔ Digital & Social Media Marketing</div>
+          <div>✔ High-Quality Lead Generation</div>
+          <div>✔ Increased Brand Awareness</div>
+          <div>✔ Measurable Business Growth</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Solutions */}
       <section className="ab-solutions-section">

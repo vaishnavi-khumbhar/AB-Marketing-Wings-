@@ -117,10 +117,13 @@ function OurWork() {
         <div className="container">
 
           <div className="section-title text-center mb-5">
-            <h2>Featured Projects</h2>
-            <p>
-              Some of the impactful projects we've delivered.
-            </p>
+            <h2>Our Work Speaks for Itself</h2>
+
+<p>
+Take a look at the creative marketing campaigns, branding projects,
+social media designs, and advertising solutions we've delivered
+for our clients.
+</p>
           </div>
 
           <div className="row g-4">

@@ -30,11 +30,15 @@ function Navbar() {
           <div className="top-left">
 
             <span>
-              <FaPhoneAlt /> +91 70585 27549
+              <FaPhoneAlt /><a href="tel:+917058527549" className="contact-link">
+  70585 27549
+</a>
             </span>
 
             <span>
-              <FaEnvelope /> abmarketingwings@gmail.com
+              <FaEnvelope /> <a href="mailto:abmarketingwings@gmail.com" className="contact-link">
+  abmarketingwings@gmail.com
+</a>
             </span>
 
             <span>

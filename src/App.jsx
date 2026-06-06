@@ -10,13 +10,14 @@ import OurWork from "./pages/OurWork/OurWork";
 import Contact from "./pages/Contact/Contact";
 
 import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop"; 
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import AiChatButton from "./components/AiChatButton/AiChatButton";
 
 function App() {
   return (
     <HashRouter>
       <Navbar />
+      <ScrollToTop />  
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +29,6 @@ function App() {
 
       {/* GLOBAL FLOATING BUTTONS */}
       <WhatsAppButton />
-      <ScrollToTop /> 
       <AiChatButton />
 
       <Footer />
