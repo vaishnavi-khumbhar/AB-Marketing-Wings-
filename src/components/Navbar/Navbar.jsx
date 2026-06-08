@@ -9,6 +9,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 
 function Navbar() {
@@ -80,6 +81,14 @@ function Navbar() {
             >
               <FaWhatsapp />
             </a>
+
+            <a
+  href="https://www.youtube.com/@abmarketingwings"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaYoutube />
+</a>
 
           </div>
 

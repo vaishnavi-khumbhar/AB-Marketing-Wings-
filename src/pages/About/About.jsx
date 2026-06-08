@@ -1,6 +1,6 @@
 import "./About.css";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from 'react';
 import {
   FaBullhorn,
   FaHashtag,
@@ -9,11 +9,14 @@ import {
   FaLaptopCode,
   FaFacebookF,
   FaAd,
+    FaChartLine,
+
   FaUsers
 } from "react-icons/fa";
 
 function About() {
   const navigate = useNavigate();
+
 
 
   const expertiseData = [
@@ -50,6 +53,25 @@ function About() {
     icon: <FaUsers />
   }
 ];
+
+
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('vis');
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.hc, .sol-card, .step').forEach((el) => observer.observe(el));
+  return () => observer.disconnect();
+}, []);
+
   return (
     <div className="ab-page">
 
@@ -73,7 +95,7 @@ function About() {
             </h1>
 
             <p>
-              Welcome to AB Marketing Wings.
+              
               We transform ambitious brands into digital success stories.
             </p>
 
@@ -101,6 +123,7 @@ function About() {
 
       </section>
 
+
       {/* About Company */}
    <section className="ab-about-company">
   <div className="blue-circle-1"></div>
@@ -116,17 +139,24 @@ function About() {
         </span>
 
         <h2>
-          Empowering Brands Through Advertising, Branding & Marketing
+         Creative Marketing Solutions   
+
         </h2>
       </div>
 
       {/* Image */}
       <div className="col-lg-6 order-2 order-lg-1">
         <img
-          src={`${import.meta.env.BASE_URL}CEO.jpeg`}
+          src={`${import.meta.env.BASE_URL}About.jpg`}
           alt="CEO Services by AB Marketing Wings"
           className="ab-about-img"
         />
+
+         {/* ADD HERE */}
+  <div className="owner-info">
+    <h4>Owner: Arti Hulle</h4>
+    <span>Founded in 2024</span>
+  </div>
       </div>
 
       {/* Content */}
@@ -139,23 +169,20 @@ function About() {
           </span>
 
           <h2>
-            Empowering Brands Through Advertising, Branding & Marketing
-          </h2>
+Creative Marketing Solutions   
+       </h2>
         </div>
 
-        <p>
-          At AB Marketing Wings, we believe every business deserves a strong
-          and memorable brand identity. We specialize in creating impactful
-          advertising campaigns, strategic branding solutions, and result-driven
-          marketing strategies that help businesses connect with their target
-          audience and stand out in a competitive market.
-        </p>
+      <p>
+  At AB Marketing Wings, we help businesses build strong and memorable brands.
+  Through creative advertising, branding, and marketing strategies, we connect
+  businesses with the right audience and drive growth.
+</p>
 
-        <p>
-          Based in Pune, our team combines creativity, innovation, and
-          data-driven insights to deliver powerful digital and offline
-          marketing solutions.
-        </p>
+<p>
+  Based in Pune, our team combines creativity, innovation, and data-driven
+  insights to deliver impactful digital and offline marketing solutions.
+</p>
 
         <div className="ab-growth-points">
           <div>✔ Creative Advertising Campaigns</div>
@@ -172,59 +199,171 @@ function About() {
   </div>
 </section>
 
+
+
+
       {/* Solutions */}
-      <section className="ab-solutions-section">
+      
+  <section className="ab-solutions-section">
+  <div className="sol-ring sr1"></div>
+  <div className="sol-ring sr2"></div>
+  <div className="sol-blob sb1"></div>
+  <div className="sol-blob sb2"></div>
 
-        <div className="container">
+  <div className="container">
+    <div className="sol-hd">
+      <div className="sol-tag">
+        <span className="sol-dot"></span>
+        Our Solutions
+      </div>
 
-          <div className="ab-section-heading">
-            <h2>Our Core Solutions</h2>
-            <p>Powerful solutions built for ambitious brands.</p>
-          </div>
+      <h2 className="sol-title">
+        <span>Advertising & Marketing Solutions</span>
+      </h2>
 
-          <div className="ab-solutions-grid">
+      <p>
+        We help businesses build powerful brands, create impactful advertising
+        campaigns, and drive measurable growth through strategic marketing
+        solutions that increase visibility, engagement, and growth.
+      </p>
+    </div>
 
-            <div className="ab-solution-card">
-              <h3>🚀 Brand Launch Studio</h3>
-              <p>Crafting powerful identities that help new businesses stand out.</p>
-            </div>
+    <div className="sol-grid">
 
-            <div className="ab-solution-card">
-              <h3>🎯 Brand Transformation Lab</h3>
-              <p>Modernizing brands with bold creativity and strategic positioning.</p>
-            </div>
-
-            <div className="ab-solution-card">
-              <h3>🎨 Visual Identity Excellence</h3>
-              <p>Designing memorable visual experiences that leave lasting impressions.</p>
-            </div>
-
-          </div>
-
+      {/* Card 1 - Branding */}
+      <div className="sol-card">
+        <div className="sol-img-placeholder sp1">
+          <FaBullhorn className="sol-img-icon" />
         </div>
 
-      </section>
+        <div className="sol-icon-wrap ic1">
+          <FaBullhorn />
+        </div>
+
+        <div className="sol-body">
+          <div className="sol-num nc1">Solution 01</div>
+
+          <h3>Brand Strategy & Identity</h3>
+
+          <p>
+            Build a strong and memorable brand with professional logo design,
+            brand identity development, and strategic positioning that helps
+            your business stand out from competitors.
+          </p>
+
+          <div className="sol-footer">
+            <div className="sol-chips">
+              <span className="sol-chip sc1">Logo Design</span>
+              <span className="sol-chip sc1">Brand Identity</span>
+            </div>
+
+            <button className="sol-arrow sa1">→</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 2 - Advertising */}
+      <div className="sol-card">
+        <div className="sol-img-placeholder sp2">
+          <FaAd className="sol-img-icon" />
+        </div>
+
+        <div className="sol-icon-wrap ic2">
+          <FaAd />
+        </div>
+
+        <div className="sol-body">
+          <div className="sol-num nc2">Solution 02</div>
+
+          <h3>Advertising Campaigns</h3>
+
+          <p>
+            Reach the right audience through creative and result-driven
+            advertising campaigns across digital, social media, print, and
+            outdoor platforms.
+          </p>
+
+          <div className="sol-footer">
+            <div className="sol-chips">
+              <span className="sol-chip sc2">Digital Ads</span>
+              <span className="sol-chip sc2">Campaign Strategy</span>
+            </div>
+
+            <button className="sol-arrow sa2">→</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3 - Marketing */}
+      <div className="sol-card">
+        <div className="sol-img-placeholder sp3">
+          <FaChartLine className="sol-img-icon" />
+        </div>
+
+        <div className="sol-icon-wrap ic3">
+          <FaChartLine />
+        </div>
+
+        <div className="sol-body">
+          <div className="sol-num nc3">Solution 03</div>
+
+          <h3>Digital Marketing Solutions</h3>
+
+          <p>
+            Accelerate business growth with data-driven marketing strategies,
+            including social media management, content marketing, and lead
+            generation services.
+          </p>
+
+          <div className="sol-footer">
+            <div className="sol-chips">
+              <span className="sol-chip sc3">Social Media</span>
+              <span className="sol-chip sc3">Leads</span>
+            </div>
+
+            <button className="sol-arrow sa3">→</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  
+  </div>
+</section>
+
+
 
       {/* Expertise */}
      {/* Expertise */}
 <section className="ab-expertise-section">
+  <div className="expertise-blur blur1"></div>
+  <div className="expertise-blur blur2"></div>
 
   <div className="container">
 
     <div className="ab-section-heading">
-      <h2>Our Expertise</h2>
+      <span className="ab-solutions-tag">Our Expertise</span>
+
+      <h2>
+        Driving Growth Through <span>Creative Excellence</span>
+      </h2>
+
       <p>
-        Innovative digital solutions designed to help brands grow faster.
+        From branding and advertising to digital marketing and creative
+        production, we deliver solutions that help businesses grow,
+        engage audiences, and achieve measurable results.
       </p>
     </div>
 
     <div className="row g-4">
-
       {expertiseData.map((item, index) => (
-
         <div className="col-md-6 col-lg-3" key={index}>
-
           <div className="ab-expertise-card">
+
+            <div className="ab-card-number">
+              0{index + 1}
+            </div>
 
             <div className="ab-expertise-icon">
               {item.icon}
@@ -232,17 +371,16 @@ function About() {
 
             <h4>{item.title}</h4>
 
+            <div className="ab-card-line"></div>
+
           </div>
-
         </div>
-
       ))}
-
     </div>
 
   </div>
-
 </section>
+
 
       {/* Case Study */}
       <section className="ab-case-study">
@@ -284,6 +422,7 @@ function About() {
         </div>
 
       </section>
+      
 
       {/* CTA */}
       <section className="ab-cta-section">

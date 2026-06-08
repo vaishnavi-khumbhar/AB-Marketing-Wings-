@@ -107,6 +107,8 @@
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
+    font-family: 'Urbanist', sans-serif;
+
 
   background: linear-gradient(
     90deg,
@@ -162,6 +164,8 @@
   border-radius: 25px;
   overflow: hidden;
   transition: 0.35s ease;
+  font-family: 'Urbanist', sans-serif;
+
 }
 
 .nav-link::before {

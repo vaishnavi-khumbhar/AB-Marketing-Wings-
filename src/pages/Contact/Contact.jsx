@@ -8,6 +8,8 @@ import {
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
+  FaYoutube,
+  FaWhatsapp,
   FaClock,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -207,7 +209,9 @@ function Contact() {
       </section>
 
       <section className="orange-contact-section py-5">
+
         <div className="container">
+          
           <div className="row g-4">
             {contactData.map((item, index) => (
               <div className="col-md-6 col-lg-3" key={index}>
@@ -242,6 +246,25 @@ function Contact() {
             <a href="https://www.linkedin.com/company/a-b-marketing-wings/" target="_blank" rel="noopener noreferrer" className="social-btn linkedin-btn">
               <FaLinkedinIn />
             </a>
+              
+              <a
+    href="https://www.youtube.com/@abmarketingwings"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-btn youtube-btn"
+  >
+    <FaYoutube />
+  </a>
+
+    <a
+    href="https://wa.me/917058527549"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-btn whatsapp-btn"
+  >
+    <FaWhatsapp />
+  </a>
+            
           </div>
         </div>
       </section>

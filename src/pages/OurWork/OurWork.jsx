@@ -1,38 +1,69 @@
 import "./OurWork.css";
 
 function OurWork() {
+  // client images templates
   const projects = [
-    {
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      title: "Digital Marketing Campaign",
-      category: "Marketing",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1552664730-d307ca884978",
-      title: "Brand Identity Design",
-      category: "Branding",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931",
-      title: "Website Development",
-      category: "Web Design",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-      title: "Social Media Growth",
-      category: "Social Media",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      title: "Lead Generation Campaign",
-      category: "Lead Generation",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
-      title: "SEO Optimization",
-      category: "SEO",
-    },
-  ];
+  {
+    img: `${import.meta.env.BASE_URL}why/Balaji_Electronics.jpg`,
+    title: "Balaji Electronics",
+    category: "Electronics",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Elite_Academia.jpg`,
+    title: "Elite Academia",
+    category: "Education",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Exttreme_Corp.jpg`,
+    title: "Exttreme Corp",
+    category: "Corporate",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Finance_Direction.jpg`,
+    title: "Finance",
+    category: "Financial Services",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/KP_Academy.jpg`,
+    title: "KP Academy",
+    category: "Education",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Lifetime_Number.jpg`,
+    title: "Lifetime Number",
+    category: "Numerology",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Motion_Solapur.jpg`,
+    title: "Motion Solapur",
+    category: "Education",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Pandharpuram_Palace.jpg`,
+    title: "Pandharpuram Palace",
+    category: "Hospitality",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Prime_Electronics.jpg`,
+    title: "Prime Electronics",
+    category: "Electronics",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Reliable_Travel.jpg`,
+    title: "Reliable Travel",
+    category: "Travel",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/SkinCare_Clinic.jpg`,
+    title: "SkinCare Clinic",
+    category: "Healthcare",
+  },
+  {
+    img: `${import.meta.env.BASE_URL}why/Unity_Hospital.jpg`,
+    title: "Unity Hospital",
+    category: "Healthcare",
+  },
+];
 
   // our client logo
  const clients = [
@@ -111,19 +142,15 @@ function OurWork() {
   </div>
 </section>
 
+
       {/* Portfolio */}
 
       <section className="portfolio-section section-padding">
         <div className="container">
 
           <div className="section-title text-center mb-5">
-            <h2>Our Work Speaks for Itself</h2>
+<h2>Explore Our Latest Creations</h2>
 
-<p>
-Take a look at the creative marketing campaigns, branding projects,
-social media designs, and advertising solutions we've delivered
-for our clients.
-</p>
           </div>
 
           <div className="row g-4">
@@ -159,40 +186,76 @@ for our clients.
 
 
 {/* case study */}
-    <section className="case-study">
+  <section className="case-study">
+
   <div className="container">
+
     <div className="case-wrapper">
 
+      {/* IMAGE SIDE */}
       <div className="case-image">
         <img
-          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
-          alt="Case Study"
+          src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80"
+          alt="Shipal Logistics Case Study"
         />
       </div>
 
+      {/* CONTENT SIDE */}
       <div className="case-content">
-        <span className="case-badge">CASE STUDY</span>
 
-        <h2>Varad Skincare Clinic</h2>
+        <span className="case-badge">
+          Logistics Case Study
+        </span>
+
+        <h2>
+          Elevating Shipal Line's Brand Presence
+        </h2>
 
         <p>
-          We partnered with Varad Skincare Clinic, Aurangabad to strengthen
-          their digital presence and generate measurable business growth.
+          When Shipal partnered with AB Marketing Wings, the goal was
+          simple — to build a brand that businesses trust before they
+          even make an inquiry.
         </p>
 
         <div className="case-results">
-          <div>✔ 100% Increase in Online Engagement</div>
-          <div>✔ Significant Growth in Inquiries</div>
-          <div>✔ Increased Patient Footfall</div>
-          <div>✔ Strong Local Brand Positioning</div>
+
+          <div>✔ Consistent brand visibility across digital platforms</div>
+
+          <div>✔ Stronger industry authority and credibility</div>
+
+          <div>✔ Improved audience engagement and brand recall</div>
+
+          <div>
+            ✔ Enhanced awareness of logistics and global shipping services
+          </div>
+
         </div>
+
+        <p className="case-description">
+          Through strategic storytelling, industry-focused content,
+          creative branding, and social media management, we helped
+          Shipal establish itself as a reliable logistics partner in an
+          increasingly competitive market.
+        </p>
+
+        <div className="case-quote">
+           Because in logistics, trust moves faster than cargo.
+        </div>
+
+        <div className="case-result-box">
+          <strong>Result:</strong> A stronger brand, greater visibility,
+          and a digital presence that supports long-term business growth.
+        </div>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-      {/* Results */}
+    {/* Results */}
 
       <section className="results-section">
   <div className="container">
@@ -229,6 +292,9 @@ for our clients.
 
 {/* our client logos */}
 <section className="clients-section">
+
+   <span className="client-tag">Our Clients</span>
+
   <h2 className="clients-title">Our Happy Clients</h2>
 
   <div className="clients-slider">
@@ -251,9 +317,12 @@ for our clients.
       {/* Testimonials */}
 
      <section className="testimonial-section">
+
   <div className="container">
 
     <div className="testimonial-header">
+         <span className="client-tag">Feedback</span>
+
       <h2>What Clients Say</h2>
       <p>Real feedback from businesses we’ve helped grow.</p>
     </div>

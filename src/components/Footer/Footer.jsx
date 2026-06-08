@@ -5,6 +5,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaWhatsapp,
+  FaYoutube,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
@@ -49,6 +50,14 @@ function Footer() {
               <a href="https://wa.me/917058527549" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp />
               </a>
+
+               <a
+    href="https://www.youtube.com/@abmarketingwings"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaYoutube />
+  </a>
 
             </div>
 

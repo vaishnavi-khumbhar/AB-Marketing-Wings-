@@ -4,12 +4,7 @@ import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import {
-  FaSearch,
-  FaRocket,
-  FaChartLine,
-  FaTasks
-} from "react-icons/fa";
+import { FaSearch, FaMap, FaRocket, FaChartLine } from 'react-icons/fa'; 
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -20,6 +15,7 @@ import "swiper/css/pagination";
 import { FaWhatsapp } from "react-icons/fa";
 
 import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 
 
@@ -97,6 +93,22 @@ function Home() {
   }, []);
 
 
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.step').forEach((s) => observer.observe(s));
+  return () => observer.disconnect();
+}, []);
+
   return (
     <>
     <section className="hero">
@@ -160,15 +172,15 @@ function Home() {
 />                
 
   <div className="floating-card leads-card">
-    🚀 500+ Leads Generated
+     500+ Leads Generated
   </div>
 
   <div className="floating-card roi-card">
-    📈 4X ROI Growth
+     4X ROI Growth
   </div>
 
   <div className="floating-card client-card">
-    ⭐ Trusted By Businesses
+     Trusted By Businesses
   </div>
 
 
@@ -277,11 +289,9 @@ function Home() {
     </div>
 
     <div className="solution-wrapper" data-aos="zoom-in-up">
-      <div className="solution-box">
-        🚀 AB Marketing Wings fixes all these problems &
-        helps your business grow faster.
-      </div>
-    </div>
+  <div className="solution-box">
+Powerful marketing strategies, creative campaigns, and measurable results — everything your business needs to stand out and succeed.
+  </div></div>
 
   </div>
 </section>
@@ -366,7 +376,7 @@ function Home() {
       <span className="case-tag">Growth Strategy</span>
 
       <h2 className="case-title">
-        Our Digital Marketing Framework
+        Digital Marketing Framework
       </h2>
 
       <p className="case-subtitle">
@@ -395,33 +405,39 @@ function Home() {
       </p>
 
       {/* STRATEGY CARDS */}
-      <div className="case-highlights">
+   <div className="case-highlights">
 
-        <div className="highlight-card">
-          🎯 Google Ads Campaign Management
-        </div>
+  <div className="highlight-card">
+    <span className="highlight-tag">ADS</span>
+    <p>Google Ads Campaign Management</p>
+  </div>
 
-        <div className="highlight-card">
-          🚀 Meta Ads Lead Generation
-        </div>
+  <div className="highlight-card">
+    <span className="highlight-tag">LEAD GENERATION</span>
+    <p>Meta Ads Lead Generation</p>
+  </div>
 
-        <div className="highlight-card">
-          🎬 UGC Video Shoot & Production
-        </div>
+  <div className="highlight-card">
+    <span className="highlight-tag">VIDEO PRODUCTION</span>
+    <p>UGC Video Shoot & Production</p>
+  </div>
 
-        <div className="highlight-card">
-          📸 Creative Content Creation
-        </div>
+  <div className="highlight-card">
+    <span className="highlight-tag">CONTENT CREATION</span>
+    <p>Creative Content Creation</p>
+  </div>
 
-        <div className="highlight-card">
-          ⭐ Influencer Marketing
-        </div>
+  <div className="highlight-card">
+    <span className="highlight-tag">INFLUENCER</span>
+    <p>Influencer Marketing</p>
+  </div>
 
-        <div className="highlight-card">
-          📱 Social Media Management
-        </div>
+  <div className="highlight-card">
+    <span className="highlight-tag">SOCIAL MEDIA</span>
+    <p>Social Media Management</p>
+  </div>
 
-      </div>
+</div>
 
       <p>
         By combining performance marketing, content creation, UGC videos,
@@ -431,6 +447,7 @@ function Home() {
       </p>
 
     </div>
+    
 
     {/* RESULTS */}
     <div className="vs-divider">
@@ -441,49 +458,42 @@ function Home() {
 
       {/* BEFORE */}
       <div className="case-card before" data-aos="fade-right">
+  <div className="status-icon">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"
+      alt="Before"
+    />
+  </div>
 
-        <div className="status-icon">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"
-            alt="Before"
-          />
-        </div>
+  <h3>Before Growth Strategy</h3>
 
-        <h3>Before</h3>
+  <div className="case-content">
+    <div className="case-item">Low brand visibility</div>
+    <div className="case-item">Limited customer reach</div>
+    <div className="case-item">Inactive social presence</div>
+    <div className="case-item">Fewer quality leads</div>
+  </div>
+</div>
 
-        <ul>
-          <li>Low Brand Awareness</li>
-          <li>Limited Online Reach</li>
-          <li>Weak Social Media Presence</li>
-          <li>Low Patient Inquiries</li>
-          <li>No Structured Marketing Strategy</li>
-        </ul>
+<div className="case-card after" data-aos="fade-left">
+  <div className="status-icon">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
+      alt="After"
+    />
+  </div>
 
-      </div>
+  <h3>After Our Strategy</h3>
 
-      {/* AFTER */}
-      <div className="case-card after" data-aos="fade-left">
-
-        <div className="status-icon">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
-            alt="After"
-          />
-        </div>
-
-        <h3>After</h3>
-
-        <ul>
-          <li>🚀 100% Increase in Online Engagement</li>
-          <li>📈 More Inquiries & Patient Footfall</li>
-          <li>⭐ Strong Local Brand Positioning</li>
-          <li>📱 Consistent Social Media Growth</li>
-          <li>💰 Better Lead Generation & Conversions</li>
-        </ul>
-
-      </div>
-
+  <div className="case-content">
+    <div className="case-item">Stronger market presence</div>
+    <div className="case-item">Wider audience reach</div>
+    <div className="case-item">Higher engagement rates</div>
+    <div className="case-item">Consistent lead generation</div>
+  </div>
+</div>
     </div>
+
 
   </div>
 </section>
@@ -498,7 +508,7 @@ function Home() {
     <h2 className="section-title">Digital Services</h2>
     <p className="section-desc">
       Powerful digital solutions designed to grow your brand,
-      generate leads and boost online visibility.
+      generate leads, and boost your online presence.
     </p>
   </div>
 
@@ -508,7 +518,7 @@ function Home() {
     <div className="marketing-service-card">
 
       <img
-        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800"
         alt="Website Development"
         className="marketing-service-image"
       />
@@ -516,80 +526,45 @@ function Home() {
       <h3>Website Development</h3>
 
       <p>
-        Your website is your digital storefront.
-        Modern, responsive and high-converting websites
-        designed to elevate your business online.
+        Fast, responsive, and SEO-optimized websites built to convert visitors into customers.
+
       </p>
 
-    <Link
-  to="/services"
-  className="marketing-read-btn"
-  onClick={() => window.scrollTo(0, 0)}
->
-  <span>Read More</span>
-  <MdOutlineArrowOutward className="btn-icon" />
-</Link>
+      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
+        <span>Read More</span>
+        <MdOutlineArrowOutward className="btn-icon" />
+      </Link>
 
     </div>
 
-    {/* SEO */}
+    {/* Social Media Marketing */}
     <div className="marketing-service-card">
 
       <img
-        src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzXWfKxyfdhVNHgKWGywZZo6N3WRe8c2xZwTkHd6juVw&s=10"
         alt="Social Media Marketing"
         className="marketing-service-image"
       />
 
-      <h3>Social Media Marketing </h3>
+      <h3>Social Media Marketing</h3>
 
       <p>
-        Our team builds engaging content strategies across Instagram and more helping you grow trust, and audience engagement.
+       Engaging content and smart strategies that turn followers into customers.
 
       </p>
-<Link
-  to="/services"
-  className="marketing-read-btn"
-  onClick={() => window.scrollTo(0, 0)}
->
-  <span>Read More</span>
-  <MdOutlineArrowOutward className="btn-icon" />
-</Link>
+
+      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
+        <span>Read More</span>
+        <MdOutlineArrowOutward className="btn-icon" />
+      </Link>
 
     </div>
 
-    {/* Social Media */}
+    {/* Paid Advertising */}
     <div className="marketing-service-card">
 
       <img
-        src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800"
-        alt="Social Media Marketing"
-        className="marketing-service-image"
-      />
-
-      <h3>Social Media Growth</h3>
-
-      <p>
-        Build a strong online presence with engaging content
-        and audience-focused campaigns.
-      </p>
-
-    <Link
-  to="/services"
-  className="marketing-read-btn"
-  onClick={() => window.scrollTo(0, 0)}
->
-  <span>Read More</span>
-  <MdOutlineArrowOutward className="btn-icon" />
-</Link>
-
-    </div>
-
-    {/* Paid Ads */}
-    <div className="marketing-service-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvjVVtLCssZNaav2OmVP-MfE5ykqRMxC9uRsCQblm2Zg&s=10"
         alt="Paid Advertising"
         className="marketing-service-image"
       />
@@ -597,25 +572,42 @@ function Home() {
       <h3>Paid Advertising</h3>
 
       <p>
-        Generate leads and maximize ROI through
-        strategic Meta & Google Ads campaigns.
+        Run high-performing Meta & Google Ads that reach the right audience and bring instant, quality leads to your business.
       </p>
 
-     <Link
-  to="/services"
-  className="marketing-read-btn"
-  onClick={() => window.scrollTo(0, 0)}
->
-  <span>Read More</span>
-  <MdOutlineArrowOutward className="btn-icon" />
-</Link>
+      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
+        <span>Read More</span>
+        <MdOutlineArrowOutward className="btn-icon" />
+      </Link>
+
+    </div>
+
+    {/* Video Editing */}
+    <div className="marketing-service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800"
+        alt="Video Editing"
+        className="marketing-service-image"
+      />
+
+      <h3>Video Editing</h3>
+
+      <p>
+        High-impact videos and content designed to capture attention and boost engagement.
+
+      </p>
+
+      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
+        <span>Read More</span>
+        <MdOutlineArrowOutward className="btn-icon" />
+      </Link>
 
     </div>
 
   </div>
 
 </section>
-
 
 {/* 5. STRONG CTA SECTION */}
 
@@ -666,75 +658,120 @@ function Home() {
 
 
 {/* 6. HOW WE WORK */}
-
-
-<section className="work-section" data-aos="fade-up">
-<div className="orange-spot spot-1"></div>
-<div className="orange-spot spot-2"></div>
+<section className="work-section">
+  <div className="deco-ring r1"></div>
+  <div className="deco-ring r2"></div>
 
   <div className="work-header">
-    <span className="work-tag">Our Process</span>
-    <h2 className="section-title">
-      How We Work
-    </h2>
-    <p>
-      We follow a proven marketing framework that helps
-      businesses attract more leads, increase engagement,
-      and scale faster.
-    </p>
+    <span className="expertise-tag">Our Process</span>
+    <h2 className="section-title">How We <em>Actually</em><br/>Grow Your Brand</h2>
+    <p>A proven 4-step advertising & branding system that builds visibility, drives leads, and delivers real business results.</p>
   </div>
 
-  <div className="work-grid">
+  <div className="steps-wrap">
+    <div className="vline"></div>
 
-    <div className="work-card">
-      <div className="work-icon">
-        <FaSearch />
+    {/* Step 1 - LEFT */}
+    <div className="step left">
+      <div className="card">
+        <img className="card-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Discovery" />
+        <div className="card-body">
+          <div className="snum s1c">Step 01</div>
+          <h3>Discover</h3>
+          <p>We study your business, target audience, and competitors to uncover the best opportunities for your brand to stand out.</p>
+          <div className="chips">
+            <span className="chip ch1">Brand Audit</span>
+            <span className="chip ch1">Audience Research</span>
+            <span className="chip ch1">Competitor Analysis</span>
+          </div>
+        </div>
       </div>
-      <span className="step-number">01</span>
-      <h3>Discover</h3>
-      <p>
-        Understand your business, audience and market opportunities.
-      </p>
+      <div className="mid-node">
+        <div className="node n1"><FaSearch /></div>
+        <span className="node-label">01</span>
+      </div>
+      <div className="empty"></div>
     </div>
 
-    <div className="work-card">
-      <div className="work-icon">
-        <FaTasks />
+    {/* Step 2 - RIGHT */}
+    <div className="step right">
+      <div className="card">
+        <img className="card-img" src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80" alt="Planning" />
+        <div className="card-body">
+          <div className="snum s2c">Step 02</div>
+          <h3>Strategize</h3>
+          <p>We build a custom advertising and branding strategy — defining your message, creatives, channels, and campaign goals.</p>
+          <div className="chips">
+            <span className="chip ch2">Ad Strategy</span>
+            <span className="chip ch2">Brand Positioning</span>
+            <span className="chip ch2">Campaign Planning</span>
+          </div>
+        </div>
       </div>
-      <span className="step-number">02</span>
-      <h3>Plan</h3>
-      <p>
-        Create a customized digital strategy designed for growth.
-      </p>
+      <div className="mid-node">
+        <div className="node n2"><FaMap /></div>
+        <span className="node-label">02</span>
+      </div>
+      <div className="empty"></div>
     </div>
 
-    <div className="work-card">
-      <div className="work-icon">
-        <FaRocket />
+    {/* Step 3 - LEFT */}
+    <div className="step left">
+      <div className="card">
+        <img className="card-img" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Execute" />
+        <div className="card-body">
+          <div className="snum s3c">Step 03</div>
+          <h3>Launch</h3>
+          <p>We execute high-impact campaigns across Meta, Google, Instagram and more — with compelling creatives that convert.</p>
+          <div className="chips">
+            <span className="chip ch3">Meta & Google Ads</span>
+            <span className="chip ch3">Creative Design</span>
+            <span className="chip ch3">Social Media</span>
+          </div>
+        </div>
       </div>
-      <span className="step-number">03</span>
-      <h3>Execute</h3>
-      <p>
-        Launch campaigns, content and ads with precision.
-      </p>
+      <div className="mid-node">
+        <div className="node n3"><FaRocket /></div>
+        <span className="node-label">03</span>
+      </div>
+      <div className="empty"></div>
     </div>
 
-    <div className="work-card">
-      <div className="work-icon">
-       <FaTasks />
+    {/* Step 4 - RIGHT */}
+    <div className="step right">
+      <div className="card">
+        <img className="card-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Scale" />
+        <div className="card-body">
+          <div className="snum s4c">Step 04</div>
+          <h3>Grow & Scale</h3>
+          <p>We track every rupee spent, optimize campaigns weekly, and scale what works — so your ROI keeps improving over time.</p>
+          <div className="chips">
+            <span className="chip ch4">Performance Tracking</span>
+            <span className="chip ch4">ROI Optimization</span>
+            <span className="chip ch4">Scale Up</span>
+          </div>
+        </div>
       </div>
-      <span className="step-number">04</span>
-      <h3>Scale</h3>
-      <p>
-        Analyze performance and continuously improve results.
-      </p>
+      <div className="mid-node">
+        <div className="node n4"><FaChartLine /></div>
+        <span className="node-label">04</span>
+      </div>
+      <div className="empty"></div>
     </div>
 
+  </div>
+
+  {/* Stats Bar */}
+  <div className="stats-bottom">
+    <div className="stat-row">
+      <div className="stat"><div className="stat-n s1c">3x</div><div className="stat-l">Avg Lead Growth</div></div>
+      <div className="stat"><div className="stat-n s2c">95%</div><div className="stat-l">Client Retention</div></div>
+      <div className="stat"><div className="stat-n s3c">7d</div><div className="stat-l">Campaign Go-Live</div></div>
+      <div className="stat"><div className="stat-n s4c">4x</div><div className="stat-l">Avg Ad ROAS</div></div>
+    </div>
   </div>
 
 </section>
-
-
 
 {/*  7. TESTIMONIALS */}
 <section className="testimonial-section">
@@ -830,6 +867,8 @@ function Home() {
   </div>
 
 </section>
+
+
 
 {/* 8. FREE AUDIT BOX */}
 

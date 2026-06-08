@@ -15,61 +15,55 @@ function Services() {
   const services = [
 
   {
-    image:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+    image:"https://www.munro.agency/wp-content/uploads/2025/03/digital-marketing.jpg",
     icon:<FaBullhorn />,
     title:"Digital Marketing",
-    desc:"We create result-driven digital marketing strategies that increase visibility, generate leads, and maximize ROI.Our expertise in SEO, PPC, and content marketing ensures your brand reaches the right audience at the right time.",
+    desc:"Data-driven marketing that increases visibility, generates leads, and drives measurable growth.",
   },
 
   {
-    image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
+    image:"https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/767bc10a0c44b0a67be1a94aea270205-1609336032121/website%20development-min.jpg",
     icon:<FaLaptopCode />,
     title:"Website Development",
-    desc:"Your website is your digital storefront.We build fast, responsive, SEO-optimized websites designed to rank higher on Google and convert visitors into customers.",
+    desc:"Fast, responsive, and SEO-optimized websites built to convert visitors into customers.",
   },
 
   {
-    image:"https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200",
+    image:"https://sonarplatform.com/wp-content/uploads/2023/02/Social-Media-Marketing.png",
     icon:<FaSearch />,
     title:"Social Media Marketing ",
-    desc:"We turn brands into conversations.Our team builds engaging content strategies across Instagram, Facebook, LinkedIn, and more  helping you grow visibility, trust, and audience engagement.",
+    desc:"Engaging content and smart strategies that turn followers into customers.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200",
     icon:<FaPaintBrush />,
-    title:"Branding & Design",
-    desc:"Your brand is your first impression, we make it unforgettable.From logo design to complete brand identity, we create visually compelling and emotionally engaging brand experiences.",
+    title:"Branding & Creative Design",
+    desc:"Build a memorable brand with powerful visuals and a strong identity.",
   },
 
   {
     image:"https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200",
     icon:<FaVideo />,
     title:"Video Editing",
-    desc:"We create scroll-stopping content that converts.From Reels to YouTube videos, our editing brings your brand story to life with cinematic quality and high engagement.",
+    desc:"High-impact videos and content designed to capture attention and boost engagement.",
   },
 
   {
-    image:"https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=1200",
-    icon:<FaFacebook />,
-    title:"Social Media Marketing",
-    desc:"We turn brands into conversations.Our team builds engaging content strategies across Instagram, Facebook, LinkedIn, and more  helping you grow visibility, trust, and audience engagement.",
-  },
-
-  {
-    image:"https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC4-E0h4O6CkeYRKSmkynPz3yiBwTnZ0OYKieevx3HLA&s=10",
     icon:<FaGoogle />,
     title:"Google Ads / PPC",
-    desc:"Reach customers actively searching for your services.Our Google Ads experts create high-converting campaigns that boost traffic, generate leads, and maximize returns.",
+    desc:"Reach customers actively searching for your services and maximize your ROI.",
   },
 
   {
-    image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLC1y8O3ff6Wg0Emj2Y8TD4be63_iqc_52XDPzCQM3Gg&s=10",
     icon:<FaChartLine />,
-    title:"Lead Generation",
-    desc:"We connect your business with ready-to-buy customers.Using funnels, landing pages, and automation, we turn interest into revenue and help you scale sustainably.",
+    title:"Meta Advertising",
+    desc:"Targeted Facebook and Instagram campaigns that generate quality leads and sales.",
   },
 ];
+
   return (
     <>
       {/* Hero Section */}
@@ -103,11 +97,16 @@ function Services() {
 
 </section>
 
-      {/* Service Cards */}
 
-    <section className="services-section section-padding">
+
+
+      {/* Service Cards */}
+              
+   <section className="services-section section-padding">
+    
   <div className="container">
-    <div className="row g-4">
+<span className="service-tag">Our Services</span>
+    <div className="row g-4 align-items-stretch">
 
       {services.map((service, index) => (
         <div className="col-lg-4 col-md-6" key={index}>
@@ -125,9 +124,11 @@ function Services() {
               {service.icon}
             </div>
 
-            <h4>{service.title}</h4>
+            <div className="service-content">
+              <h4>{service.title}</h4>
 
-            <p>{service.desc}</p>
+              <p>{service.desc}</p>
+            </div>
 
           </div>
 
@@ -137,6 +138,8 @@ function Services() {
     </div>
   </div>
 </section>
+
+
 
      {/* Why Choose Us */}
 <section className="why-section">
@@ -151,10 +154,10 @@ function Services() {
       {/* LEFT CONTENT */}
       <div className="col-lg-6">
 
-        <span className="why-tag">WHY CHOOSE US</span>
+        <span className="why-tag">Why Choose Us</span>
 
         <h2>
-          <span>Why Choose AB Marketing Wings?</span>
+  <span>Your Success is Our Priority</span>
         </h2>
 
         <p className="why-description">
@@ -166,47 +169,46 @@ function Services() {
         <div className="why-features">
 
           <div className="why-item">
-            <span>🎯</span>
+            <span></span>
             <div>
-              <h5>Tailored Solutions For Every Brand</h5>
+              <h5>Tailored Strategies</h5>
               <p>
-                No two businesses are the same. We create customized
-                digital marketing strategies aligned with your goals.
-                
+                Every business is unique. We create customized marketing solutions built around your goals, audience, and industry.
+
               </p>
             </div>
           </div>
 
           <div className="why-item">
-            <span>📈</span>
+            <span></span>
             <div>
-              <h5>ROI-Driven Approach</h5>
+              <h5>Results That Matter</h5>
               <p>
-                Every campaign is built to generate measurable results,
-                ensuring your marketing investment translates into
-                real business growth.
+                Our focus is simple — generate leads, increase sales, and maximize your ROI.
+
               </p>
             </div>
           </div>
 
           <div className="why-item">
-            <span>🤖</span>
+            <span></span>
             <div>
-              <h5>AI-Powered Marketing Strategies</h5>
+              <h5>AI-Powered Marketing
+</h5>
               <p>
-                We leverage AI tools and advanced analytics to optimize
-                campaigns, improve targeting and maximize performance.
+                We combine creativity with AI-driven insights to optimize campaigns and improve performance.
+
               </p>
             </div>
           </div>
 
           <div className="why-item">
-            <span>🚀</span>
+            <span></span>
             <div>
-              <h5>Always Ahead Of The Market Curve</h5>
+              <h5>Stay Ahead of the Competition</h5>
               <p>
-                Trends change fast and we move faster. Our team stays
-                updated with the latest platforms, technologies.
+               Digital trends change fast. We help your brand stay relevant, visible, and one step ahead.
+
               </p>
             </div>
           </div>
@@ -232,6 +234,7 @@ function Services() {
   </div>
 
 </section>
+
 
       {/* CTA */}
 

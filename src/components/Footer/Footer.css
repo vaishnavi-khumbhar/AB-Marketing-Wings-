@@ -12,6 +12,8 @@
   background: linear-gradient(135deg, #ff7a18, #ffb347);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+    font-family: 'Urbanist', sans-serif;
+
 }
 
 /* Text */
@@ -26,6 +28,8 @@
   margin-bottom: 25px;
   font-weight: 700;
   color: #ff9a3c;
+      font-family: 'Urbanist', sans-serif;
+
 }
 
 /* Lists */
