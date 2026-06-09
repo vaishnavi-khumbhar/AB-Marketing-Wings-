@@ -382,48 +382,8 @@ Creative Marketing Solutions
 </section>
 
 
-      {/* Case Study */}
-      <section className="ab-case-study">
-
-        <div className="container">
-
-          <div className="ab-case-card">
-
-            <span>CASE STUDY</span>
-
-            <h2>Varad Skincare Clinic</h2>
-
-            <p>
-              We transformed their digital presence using
-              content marketing, storytelling and Meta Ads.
-            </p>
-
-            <div className="ab-case-stats">
-
-              <div>
-                <h3>100%</h3>
-                <p>Engagement Growth</p>
-              </div>
-
-              <div>
-                <h3>3X</h3>
-                <p>More Inquiries</p>
-              </div>
-
-              <div>
-                <h3>Top</h3>
-                <p>Local Brand Positioning</p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
       
-
+     
       {/* CTA */}
       <section className="ab-cta-section">
 

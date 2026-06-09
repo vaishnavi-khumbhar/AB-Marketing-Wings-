@@ -15,53 +15,54 @@ function Services() {
   const services = [
 
   {
-    image:"https://www.munro.agency/wp-content/uploads/2025/03/digital-marketing.jpg",
-    icon:<FaBullhorn />,
-    title:"Digital Marketing",
-    desc:"Data-driven marketing that increases visibility, generates leads, and drives measurable growth.",
+    image: `${import.meta.env.BASE_URL}Services/digital-marketing.jpg`,
+    icon: <FaBullhorn />,
+    title: "Digital Marketing",
+    desc: "Data-driven marketing that increases visibility, generates leads, and drives measurable growth.",
   },
 
   {
-    image:"https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/767bc10a0c44b0a67be1a94aea270205-1609336032121/website%20development-min.jpg",
-    icon:<FaLaptopCode />,
-    title:"Website Development",
-    desc:"Fast, responsive, and SEO-optimized websites built to convert visitors into customers.",
+    image: `${import.meta.env.BASE_URL}Services/website_development.webp`,
+    icon: <FaLaptopCode />,
+    title: "Website Development",
+    desc: "Fast, responsive, and SEO-optimized websites built to convert visitors into customers.",
   },
 
   {
-    image:"https://sonarplatform.com/wp-content/uploads/2023/02/Social-Media-Marketing.png",
-    icon:<FaSearch />,
-    title:"Social Media Marketing ",
-    desc:"Engaging content and smart strategies that turn followers into customers.",
+    image: `${import.meta.env.BASE_URL}Services/social-media.png`,
+    icon: <FaSearch />,
+    title: "Social Media Marketing",
+    desc: "Engaging content and smart strategies that turn followers into customers.",
   },
 
   {
-    image:"https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200",
-    icon:<FaPaintBrush />,
-    title:"Branding & Creative Design",
-    desc:"Build a memorable brand with powerful visuals and a strong identity.",
+    image: `${import.meta.env.BASE_URL}Services/drand_design.jpg`,
+    icon: <FaPaintBrush />,
+    title: "Branding & Creative Design",
+    desc: "Build a memorable brand with powerful visuals and a strong identity.",
   },
 
   {
-    image:"https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200",
-    icon:<FaVideo />,
-    title:"Video Editing",
-    desc:"High-impact videos and content designed to capture attention and boost engagement.",
+    image: `${import.meta.env.BASE_URL}Services/video_editing.jpg`,
+    icon: <FaVideo />,
+    title: "Video Editing",
+    desc: "High-impact videos and content designed to capture attention and boost engagement.",
   },
 
   {
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC4-E0h4O6CkeYRKSmkynPz3yiBwTnZ0OYKieevx3HLA&s=10",
-    icon:<FaGoogle />,
-    title:"Google Ads / PPC",
-    desc:"Reach customers actively searching for your services and maximize your ROI.",
+    image: `${import.meta.env.BASE_URL}Services/google_ads.jpg`,
+    icon: <FaGoogle />,
+    title: "Google Ads / PPC",
+    desc: "Reach customers actively searching for your services and maximize your ROI.",
   },
 
   {
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLC1y8O3ff6Wg0Emj2Y8TD4be63_iqc_52XDPzCQM3Gg&s=10",
-    icon:<FaChartLine />,
-    title:"Meta Advertising",
-    desc:"Targeted Facebook and Instagram campaigns that generate quality leads and sales.",
+    image: `${import.meta.env.BASE_URL}Services/meta.jpg`,
+    icon: <FaChartLine />,
+    title: "Meta Advertising",
+    desc: "Targeted Facebook and Instagram campaigns that generate quality leads and sales.",
   },
+
 ];
 
   return (

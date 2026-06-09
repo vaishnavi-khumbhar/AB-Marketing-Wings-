@@ -194,10 +194,12 @@ function OurWork() {
 
       {/* IMAGE SIDE */}
       <div className="case-image">
-        <img
-          src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80"
-          alt="Shipal Logistics Case Study"
-        />
+       <div className="case-image">
+  <img
+    src={`${import.meta.env.BASE_URL}Client_review.jpg`}
+    alt="Shipal Logistics Case Study"
+  />
+</div>
       </div>
 
       {/* CONTENT SIDE */}

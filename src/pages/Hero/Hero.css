@@ -1,0 +1,385 @@
+/* ==========================
+   HERO SECTION
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+/* ─── WRAPPER ─── */
+.hero-wrapper {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
+  transition: background 0.7s ease;
+}
+
+/* ─── BLOBS ─── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.7s ease;
+}
+.blob-1 {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: -80px;
+}
+.blob-2 {
+  width: 220px;
+  height: 220px;
+  bottom: 20px;
+  left: 260px;
+  opacity: 0.14;
+}
+
+/* ─── TRACK (horizontal slide) ─── */
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.75s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* ─── SINGLE SLIDE ─── */
+.hero-slide {
+  min-width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 0 52px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── LEFT CONTENT ─── */
+.hero-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 24px;
+}
+
+.hero-eyebrow {
+   font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  font-family: 'Outfit', sans-serif;
+  
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  margin-bottom: 22px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.hero-title em {
+  font-style: normal;
+}
+
+.hero-desc {
+   font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 520px;
+  opacity: 0.85;
+  font-weight: 400;
+  font-family: 'Outfit', sans-serif;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+    padding: 16px 34px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s, filter 0.2s;
+  font-family: 'Outfit', sans-serif;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+}
+
+.btn-ghost {
+   padding: 16px 30px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  font-family: 'Outfit', sans-serif;
+}
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ─── RIGHT VISUAL ─── */
+.hero-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ic-wrap {
+  position: relative;
+  width: 230px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ic-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transition: background 0.6s, box-shadow 0.6s;
+}
+
+.ic-main {
+  font-size: 84px;
+  position: relative;
+  z-index: 2;
+  transition: color 0.6s;
+}
+
+/* ─── CHIPS ─── */
+.chip {
+  position: absolute;
+  border-radius: 12px;
+  padding: 8px 14px;
+  z-index: 4;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  transition: background 0.6s;
+}
+.chip-val {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+}
+.chip-lbl {
+ font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.chip.fc1 {
+  top: -10px;
+  right: -30px;
+  animation: flt 3s ease-in-out infinite;
+}
+.chip.fc2 {
+  bottom: 30px;
+  right: -40px;
+  animation: flt 3.8s ease-in-out infinite 0.5s;
+}
+.chip.fc3 {
+  bottom: -10px;
+  left: -20px;
+  animation: flt 3.4s ease-in-out infinite 1s;
+}
+
+@keyframes flt {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ─── BOTTOM BAR ─── */
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 52px 24px;
+  z-index: 10;
+}
+
+/* Numbered Nav */
+.hero-nums {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.num-item {
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.35s;
+  padding: 0 4px;
+  user-select: none;
+}
+.num-item.active {
+  opacity: 1;
+}
+.num-big {
+ font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+.num-lbl {
+   font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 3px;
+}
+
+.num-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Arrow Buttons */
+.hero-arrows {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1.5px solid;
+}
+.arrow-btn.ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+}
+.arrow-btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.arrow-btn.filled {
+  color: #fff;
+  transition: transform 0.2s, filter 0.2s, background 0.6s, border-color 0.6s;
+}
+.arrow-btn.filled:hover {
+  transform: scale(1.08);
+  filter: brightness(1.12);
+}
+
+/* ─── PROGRESS BAR ─── */
+.progress-bar-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.07);
+  z-index: 20;
+}
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: background 0.6s;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .hero-slide {
+    flex-direction: column;
+    padding: 40px 24px 80px;
+    min-height: 600px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-left {
+    width: 100%;
+    padding-right: 0;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-desc {
+    max-width: 100%;
+    font-size: 16px;
+  }
+  .hero-right {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .hero-bottom {
+    padding: 0 24px 20px;
+  }
+  .hero-nums {
+    gap: 10px;
+  }
+  .num-big {
+    font-size: 20px;
+  }
+  .blob-1 {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .ic-wrap {
+    width: 180px;
+    height: 200px;
+  }
+  .ic-main {
+    font-size: 64px;
+  }
+}

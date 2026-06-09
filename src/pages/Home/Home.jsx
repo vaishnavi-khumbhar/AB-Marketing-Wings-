@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+import Hero from "../Hero/Hero";
+
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
@@ -18,12 +21,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 
 
-
-
 function Home() {
-
-
-
   // google review
   const reviews = [
   {
@@ -49,47 +47,10 @@ function Home() {
   }
 ];
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
-  }, []);
-
-  const slides = [
-    {
-      title: "Turn Attention Into Customers",
-      subtitle: "Powerful digital marketing that grows Indian businesses.",
-      image:
-        "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80",
-    },
-    {
-      title: "Generate High Quality Leads",
-      subtitle: "Performance marketing that converts real customers in India.",
-      image:
-        "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1600&q=80",
-    },
-    {
-      title: "Scale Your Business Faster",
-      subtitle: "AI + Digital strategies built for modern Indian startups.",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
-    },
-    {
-      title: "Build Powerful Brand Identity",
-      subtitle: "Creative branding that stands out in Indian market.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
-    },
-  ];
-
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 3500);
-
-    return () => clearInterval(interval);
   }, []);
 
 
@@ -109,90 +70,56 @@ function Home() {
   return () => observer.disconnect();
 }, []);
 
+
+  //   const slides = [
+  //   {
+  //     title: "Turn Attention Into Customers",
+  //     subtitle: "Powerful digital marketing that grows Indian businesses.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80",
+  //   },
+  //   {
+  //     title: "Generate High Quality Leads",
+  //     subtitle: "Performance marketing that converts real customers in India.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1600&q=80",
+  //   },
+  //   {
+  //     title: "Scale Your Business Faster",
+  //     subtitle: "AI + Digital strategies built for modern Indian startups.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+  //   },
+  //   {
+  //     title: "Build Powerful Brand Identity",
+  //     subtitle: "Creative branding that stands out in Indian market.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+  //   },
+  // ];
+
+  // const [current, setCurrent] = useState(0);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % slides.length);
+  //   }, 1500);
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
+
+  
+
   return (
     <>
-    <section className="hero">
-
-      {/* BACKGROUND SLIDER */}
-      <div className="hero-bg">
-        <img
-          src={slides[current].image}
-          alt="slide"
-          className="bg-image"
-        />
-        <div className="overlay"></div>
-        <div className="color-overlay"></div>
-      </div>
-
-      {/* CONTENT */}
-      <div className="container">
-        <div className="row align-items-center min-vh-100">
-
-          {/* TEXT */}
-          <div className="col-lg-6 text-box">
-
-            <div className="brand-badge">
-              AB MARKETING WINGS
-            </div>
-
-            <h1 className="title fade-text">
-              {slides[current].title}
-            </h1>
-
-            <p className="subtitle fade-text">
-              {slides[current].subtitle}
-            </p>
-
-<div className="hero-buttons">
-              {/* CONTACT BUTTON */}
-              <button
-                className="btn primary pulse-btn"
-                onClick={() => navigate("/contact")}
-              >
-                Book Free Consultation
-              </button>
-
-              <button className="btn outline" onClick={() =>  navigate("/services")}>
-                View Services
-              </button>
-
-            </div>
-
-          </div>
-
-          {/* RIGHT IMAGE WITH RATING BADGE */}
-          <div className="col-lg-6 text-center image-wrapper">
-
-            <div className="image-card">
-
-             <img
-  src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
-  className="hero-icon"
-  alt="AI Marketing"
-/>                
-
-  <div className="floating-card leads-card">
-     500+ Leads Generated
-  </div>
-
-  <div className="floating-card roi-card">
-     4X ROI Growth
-  </div>
-
-  <div className="floating-card client-card">
-     Trusted By Businesses
-  </div>
+       
+      <Hero />
 
 
 
-            </div>
 
-          </div>
 
-        </div>
-      </div>
-
-    </section>
 
 
    {/* 1. WE SOLVE BUSINESS PROBLEMS */}
@@ -212,74 +139,90 @@ function Home() {
 </p>
     </div>
 
-    <div className="problem-grid">
+     <div className="problem-grid">
 
+      {/* Card 1 */}
       <div className="problem-card" data-aos="zoom-in">
         <div className="icon-box">
           <img
             src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
-            alt=""
+            alt="Lead Generation"
           />
         </div>
 
         <div className="problem-image">
           <img
-            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800"
-            alt=""
+            src={`${import.meta.env.BASE_URL}Home_Page/No_leads.jpg`}
+            alt="No Leads Coming"
           />
         </div>
 
         <h4>No Leads Coming?</h4>
       </div>
 
-      <div className="problem-card" data-aos="zoom-in" data-aos-delay="100">
+      {/* Card 2 */}
+      <div
+        className="problem-card"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+      >
         <div className="icon-box">
           <img
             src="https://cdn-icons-png.flaticon.com/512/4149/4149678.png"
-            alt=""
+            alt="Brand Awareness"
           />
         </div>
 
         <div className="problem-image">
           <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
-            alt=""
+            src={`${import.meta.env.BASE_URL}Home_Page/Brand_Avness.webp`}
+            alt="Low Brand Awareness"
           />
         </div>
 
         <h4>Low Brand Awareness?</h4>
       </div>
 
-      <div className="problem-card" data-aos="zoom-in" data-aos-delay="200">
+      {/* Card 3 */}
+      <div
+        className="problem-card"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
         <div className="icon-box">
           <img
             src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-            alt=""
+            alt="Website Conversion"
           />
         </div>
 
         <div className="problem-image">
           <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800"
-            alt=""
+            src={`${import.meta.env.BASE_URL}Home_Page/Website_Conversion.jpg`}
+            alt="Poor Website Conversion"
           />
         </div>
 
         <h4>Poor Website Conversion?</h4>
       </div>
 
-      <div className="problem-card" data-aos="zoom-in" data-aos-delay="300">
+      {/* Card 4 */}
+      <div
+        className="problem-card"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
         <div className="icon-box">
           <img
             src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
-            alt=""
+            alt="Social Media"
           />
         </div>
 
         <div className="problem-image">
           <img
-            src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800"
-            alt=""
+            src={`${import.meta.env.BASE_URL}Home_Page/Socia_media.png`}
+            alt="Weak Social Media Presence"
           />
         </div>
 
@@ -289,12 +232,19 @@ function Home() {
     </div>
 
     <div className="solution-wrapper" data-aos="zoom-in-up">
-  <div className="solution-box">
-Powerful marketing strategies, creative campaigns, and measurable results — everything your business needs to stand out and succeed.
-  </div></div>
+      <div className="solution-box">
+        Powerful marketing strategies, creative campaigns, and measurable
+        results — everything your business needs to stand out and succeed.
+      </div>
+    </div>
 
   </div>
 </section>
+
+
+
+
+
 
 {/* 2. RESULTS SHOWCASE */}
 <section className="stats-section" data-aos="fade-up">
@@ -514,100 +464,119 @@ Powerful marketing strategies, creative campaigns, and measurable results — ev
 
   <div className="grid">
 
-    {/* Website Development */}
-    <div className="marketing-service-card">
+  {/* Website Development */}
+  <div className="marketing-service-card">
 
-      <img
-        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800"
-        alt="Website Development"
-        className="marketing-service-image"
-      />
+    <img
+      src={`${import.meta.env.BASE_URL}Home_Page/Website_Development.jpg`}
+      alt="Website Development"
+      className="marketing-service-image"
+    />
 
-      <h3>Website Development</h3>
+    <h3>Website Development</h3>
 
-      <p>
-        Fast, responsive, and SEO-optimized websites built to convert visitors into customers.
+    <p>
+      Fast, responsive, and SEO-optimized websites built to convert visitors into customers.
+    </p>
 
-      </p>
-
-      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
-        <span>Read More</span>
-        <MdOutlineArrowOutward className="btn-icon" />
-      </Link>
-
-    </div>
-
-    {/* Social Media Marketing */}
-    <div className="marketing-service-card">
-
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzXWfKxyfdhVNHgKWGywZZo6N3WRe8c2xZwTkHd6juVw&s=10"
-        alt="Social Media Marketing"
-        className="marketing-service-image"
-      />
-
-      <h3>Social Media Marketing</h3>
-
-      <p>
-       Engaging content and smart strategies that turn followers into customers.
-
-      </p>
-
-      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
-        <span>Read More</span>
-        <MdOutlineArrowOutward className="btn-icon" />
-      </Link>
-
-    </div>
-
-    {/* Paid Advertising */}
-    <div className="marketing-service-card">
-
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvjVVtLCssZNaav2OmVP-MfE5ykqRMxC9uRsCQblm2Zg&s=10"
-        alt="Paid Advertising"
-        className="marketing-service-image"
-      />
-
-      <h3>Paid Advertising</h3>
-
-      <p>
-        Run high-performing Meta & Google Ads that reach the right audience and bring instant, quality leads to your business.
-      </p>
-
-      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
-        <span>Read More</span>
-        <MdOutlineArrowOutward className="btn-icon" />
-      </Link>
-
-    </div>
-
-    {/* Video Editing */}
-    <div className="marketing-service-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800"
-        alt="Video Editing"
-        className="marketing-service-image"
-      />
-
-      <h3>Video Editing</h3>
-
-      <p>
-        High-impact videos and content designed to capture attention and boost engagement.
-
-      </p>
-
-      <Link to="/services" className="marketing-read-btn" onClick={() => window.scrollTo(0, 0)}>
-        <span>Read More</span>
-        <MdOutlineArrowOutward className="btn-icon" />
-      </Link>
-
-    </div>
+    <Link
+      to="/services"
+      className="marketing-read-btn"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      <span>Read More</span>
+      <MdOutlineArrowOutward className="btn-icon" />
+    </Link>
 
   </div>
 
+  {/* Social Media Marketing */}
+  <div className="marketing-service-card">
+
+    <img
+      src={`${import.meta.env.BASE_URL}Home_Page/Social_media.jpg`}
+      alt="Social Media Marketing"
+      className="marketing-service-image"
+    />
+
+    <h3>Social Media Marketing</h3>
+
+    <p>
+      Engaging content and smart strategies that turn followers into customers.
+    </p>
+
+    <Link
+      to="/services"
+      className="marketing-read-btn"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      <span>Read More</span>
+      <MdOutlineArrowOutward className="btn-icon" />
+    </Link>
+
+  </div>
+
+  {/* Paid Advertising */}
+  <div className="marketing-service-card">
+
+    <img
+      src={`${import.meta.env.BASE_URL}Home_Page/Paid_advertising.jpg`}
+      alt="Paid Advertising"
+      className="marketing-service-image"
+    />
+
+    <h3>Paid Advertising</h3>
+
+    <p>
+      Run high-performing Meta & Google Ads that reach the right audience and bring instant, quality leads to your business.
+    </p>
+
+    <Link
+      to="/services"
+      className="marketing-read-btn"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      <span>Read More</span>
+      <MdOutlineArrowOutward className="btn-icon" />
+    </Link>
+
+  </div>
+
+  {/* Video Editing */}
+  <div className="marketing-service-card">
+
+    <img
+      src={`${import.meta.env.BASE_URL}Home_Page/Video_editing.jpg`}
+      alt="Video Editing"
+      className="marketing-service-image"
+    />
+
+    <h3>Video Editing</h3>
+
+    <p>
+      High-impact videos and content designed to capture attention and boost engagement.
+    </p>
+
+    <Link
+      to="/services"
+      className="marketing-read-btn"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      <span>Read More</span>
+      <MdOutlineArrowOutward className="btn-icon" />
+    </Link>
+
+  </div>
+
+</div>
+  
+
 </section>
+
+
+
+
+
 
 {/* 5. STRONG CTA SECTION */}
 
@@ -671,93 +640,121 @@ Powerful marketing strategies, creative campaigns, and measurable results — ev
   <div className="steps-wrap">
     <div className="vline"></div>
 
-    {/* Step 1 - LEFT */}
-    <div className="step left">
-      <div className="card">
-        <img className="card-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Discovery" />
-        <div className="card-body">
-          <div className="snum s1c">Step 01</div>
-          <h3>Discover</h3>
-          <p>We study your business, target audience, and competitors to uncover the best opportunities for your brand to stand out.</p>
-          <div className="chips">
-            <span className="chip ch1">Brand Audit</span>
-            <span className="chip ch1">Audience Research</span>
-            <span className="chip ch1">Competitor Analysis</span>
-          </div>
-        </div>
+{/* Step 1 - LEFT */}
+<div className="step left">
+  <div className="card">
+    <img
+      className="card-img"
+      src={`${import.meta.env.BASE_URL}Home_Page/Step-1.jpg`}
+      alt="Discovery"
+    />
+    <div className="card-body">
+      <div className="snum s1c">Step 01</div>
+      <h3>Discover</h3>
+      <p>
+        We study your business, target audience, and competitors to uncover
+        the best opportunities for your brand to stand out.
+      </p>
+      <div className="chips">
+        <span className="chip ch1">Brand Audit</span>
+        <span className="chip ch1">Audience Research</span>
+        <span className="chip ch1">Competitor Analysis</span>
       </div>
-      <div className="mid-node">
-        <div className="node n1"><FaSearch /></div>
-        <span className="node-label">01</span>
-      </div>
-      <div className="empty"></div>
     </div>
+  </div>
+  <div className="mid-node">
+    <div className="node n1"><FaSearch /></div>
+    <span className="node-label">01</span>
+  </div>
+  <div className="empty"></div>
+</div>
 
-    {/* Step 2 - RIGHT */}
-    <div className="step right">
-      <div className="card">
-        <img className="card-img" src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80" alt="Planning" />
-        <div className="card-body">
-          <div className="snum s2c">Step 02</div>
-          <h3>Strategize</h3>
-          <p>We build a custom advertising and branding strategy — defining your message, creatives, channels, and campaign goals.</p>
-          <div className="chips">
-            <span className="chip ch2">Ad Strategy</span>
-            <span className="chip ch2">Brand Positioning</span>
-            <span className="chip ch2">Campaign Planning</span>
-          </div>
-        </div>
+{/* Step 2 - RIGHT */}
+<div className="step right">
+  <div className="card">
+    <img
+      className="card-img"
+      src={`${import.meta.env.BASE_URL}Home_Page/Step-2.jpg`}
+      alt="Planning"
+    />
+    <div className="card-body">
+      <div className="snum s2c">Step 02</div>
+      <h3>Strategize</h3>
+      <p>
+        We build a custom advertising and branding strategy — defining your
+        message, creatives, channels, and campaign goals.
+      </p>
+      <div className="chips">
+        <span className="chip ch2">Ad Strategy</span>
+        <span className="chip ch2">Brand Positioning</span>
+        <span className="chip ch2">Campaign Planning</span>
       </div>
-      <div className="mid-node">
-        <div className="node n2"><FaMap /></div>
-        <span className="node-label">02</span>
-      </div>
-      <div className="empty"></div>
     </div>
+  </div>
+  <div className="mid-node">
+    <div className="node n2"><FaMap /></div>
+    <span className="node-label">02</span>
+  </div>
+  <div className="empty"></div>
+</div>
 
-    {/* Step 3 - LEFT */}
-    <div className="step left">
-      <div className="card">
-        <img className="card-img" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Execute" />
-        <div className="card-body">
-          <div className="snum s3c">Step 03</div>
-          <h3>Launch</h3>
-          <p>We execute high-impact campaigns across Meta, Google, Instagram and more — with compelling creatives that convert.</p>
-          <div className="chips">
-            <span className="chip ch3">Meta & Google Ads</span>
-            <span className="chip ch3">Creative Design</span>
-            <span className="chip ch3">Social Media</span>
-          </div>
-        </div>
+{/* Step 3 - LEFT */}
+<div className="step left">
+  <div className="card">
+    <img
+      className="card-img"
+      src={`${import.meta.env.BASE_URL}Home_Page/Step-3.jpg`}
+      alt="Launch"
+    />
+    <div className="card-body">
+      <div className="snum s3c">Step 03</div>
+      <h3>Launch</h3>
+      <p>
+        We execute high-impact campaigns across Meta, Google, Instagram and
+        more — with compelling creatives that convert.
+      </p>
+      <div className="chips">
+        <span className="chip ch3">Meta & Google Ads</span>
+        <span className="chip ch3">Creative Design</span>
+        <span className="chip ch3">Social Media</span>
       </div>
-      <div className="mid-node">
-        <div className="node n3"><FaRocket /></div>
-        <span className="node-label">03</span>
-      </div>
-      <div className="empty"></div>
     </div>
+  </div>
+  <div className="mid-node">
+    <div className="node n3"><FaRocket /></div>
+    <span className="node-label">03</span>
+  </div>
+  <div className="empty"></div>
+</div>
 
-    {/* Step 4 - RIGHT */}
-    <div className="step right">
-      <div className="card">
-        <img className="card-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Scale" />
-        <div className="card-body">
-          <div className="snum s4c">Step 04</div>
-          <h3>Grow & Scale</h3>
-          <p>We track every rupee spent, optimize campaigns weekly, and scale what works — so your ROI keeps improving over time.</p>
-          <div className="chips">
-            <span className="chip ch4">Performance Tracking</span>
-            <span className="chip ch4">ROI Optimization</span>
-            <span className="chip ch4">Scale Up</span>
-          </div>
-        </div>
+{/* Step 4 - RIGHT */}
+<div className="step right">
+  <div className="card">
+    <img
+      className="card-img"
+      src={`${import.meta.env.BASE_URL}Home_Page/Step-4.jpg`}
+      alt="Grow & Scale"
+    />
+    <div className="card-body">
+      <div className="snum s4c">Step 04</div>
+      <h3>Grow & Scale</h3>
+      <p>
+        We track every rupee spent, optimize campaigns weekly, and scale what
+        works — so your ROI keeps improving over time.
+      </p>
+      <div className="chips">
+        <span className="chip ch4">Performance Tracking</span>
+        <span className="chip ch4">ROI Optimization</span>
+        <span className="chip ch4">Scale Up</span>
       </div>
-      <div className="mid-node">
-        <div className="node n4"><FaChartLine /></div>
-        <span className="node-label">04</span>
-      </div>
-      <div className="empty"></div>
     </div>
+  </div>
+  <div className="mid-node">
+    <div className="node n4"><FaChartLine /></div>
+    <span className="node-label">04</span>
+  </div>
+  <div className="empty"></div>
+</div>
 
   </div>
 
