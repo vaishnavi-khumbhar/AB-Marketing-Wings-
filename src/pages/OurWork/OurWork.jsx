@@ -196,7 +196,7 @@ function OurWork() {
       <div className="case-image">
        <div className="case-image">
   <img
-    src={`${import.meta.env.BASE_URL}Client_review.jpg`}
+    src={`${import.meta.env.BASE_URL}Client_review.jpeg`}
     alt="Shipal Logistics Case Study"
   />
 </div>
@@ -255,6 +255,44 @@ function OurWork() {
 
   </div>
 
+</section>
+
+
+
+
+
+<section className="success-section">
+  <div className="success-card">
+
+    <div className="success-left">
+      <div className="big-number">60+</div>
+      <p>Orders Generated</p>
+      <span>Within 48 Hours</span>
+    </div>
+
+    <div className="success-right">
+
+      <span className="success-tag">
+         Client Success Story
+      </span>
+
+      <h2>Gavran Eggswala Campaign</h2>
+
+      <p>
+        We executed a highly targeted digital marketing campaign
+        that generated 60+ orders in just 2 days through strategic
+        audience targeting and performance optimization.
+      </p>
+
+      <div className="success-points">
+        <div>✔ Brand Visibility Increased</div>
+        <div>✔ Higher Customer Engagement</div>
+        <div>✔ Fast & Measurable Growth</div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
     {/* Results */}

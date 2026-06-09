@@ -620,6 +620,8 @@ margin-bottom:25px;
   border-radius: 22px;
   box-shadow: 0 25px 50px rgba(0,0,0,0.15);
   transition: 0.5s ease;
+  height: 420px;
+
 }
 
 .case-image img:hover {
@@ -792,7 +794,8 @@ margin-bottom:25px;
 
   .case-image{
     order:2;
-    margin-top:20px;
+    margin-top:10px;
+    height:260px;
   }
 
   .case-description,
@@ -843,9 +846,311 @@ margin-bottom:25px;
 }
 
 
+/* second review */
+.case-study-section {
+  padding: 100px 20px;
+  background: linear-gradient(
+    135deg,
+    #f8fbff,
+    #ffffff,
+    #fff3eb
+  );
+}
+
+.case-study-card {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  align-items: center;
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.9);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.08);
+
+  animation: fadeUp 1s ease;
+}
+
+.case-image {
+  position: relative;
+}
+
+.case-image img {
+  width: 100%;
+  height: 450px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  transition: .5s ease;
+}
+
+.case-image:hover img {
+  transform: scale(1.04);
+}
+
+.case-badge {
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  border-radius: 30px;
+
+  background: rgba(255,106,0,.1);
+
+  color: #ff6a00;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.case-content h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.case-content h2 span {
+  color: #ff6a00;
+}
+
+.case-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+}
+
+.stat-box {
+  text-align: center;
+
+  padding: 25px 15px;
+
+  border-radius: 18px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.06);
+
+  transition: .4s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-8px);
+}
+
+.stat-box h3 {
+  font-size: 40px;
+  color: #ff6a00;
+  font-weight: 800;
+}
+
+.achievements {
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.achievements div {
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  background: #fff7f2;
+
+  border-left: 4px solid #ff6a00;
+
+  font-weight: 600;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .case-study-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-content h2 {
+    font-size: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .case-study-section {
+    padding: 70px 15px;
+  }
+
+  .case-study-card {
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .case-image img {
+    height: 220px;
+  }
+
+  .case-content h2 {
+    font-size: 28px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box h3 {
+    font-size: 30px;
+  }
+}
 
 
+/* second review  */
+.success-section{
+  padding:100px 20px;
+  background:#fafcff;
+}
 
+.success-card{
+  max-width:900px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:40px;
+
+  padding:35px;
+
+  border-radius:30px;
+
+  background:white;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.08);
+
+  transition:.4s;
+}
+
+.success-card:hover{
+  transform:translateY(-8px);
+}
+
+.success-left{
+  min-width:250px;
+
+  text-align:center;
+
+  padding:35px 25px;
+
+  border-radius:24px;
+
+  background:
+  linear-gradient(135deg,#ff6a00,#ff8c42);
+
+  color:white;
+}
+
+.big-number{
+  font-size:80px;
+  font-weight:900;
+  line-height:1;
+}
+
+.success-left p{
+  font-size:22px;
+  font-weight:700;
+  margin:10px 0;
+}
+
+.success-left span{
+  opacity:.9;
+}
+
+.success-tag{
+  display:inline-block;
+  padding:8px 18px;
+
+  background:#fff2e8;
+  color:#ff6a00;
+
+  border-radius:30px;
+  font-weight:700;
+}
+
+.success-right h2{
+  margin:15px 0;
+  font-size:34px;
+  font-weight:800;
+}
+
+.success-right p{
+  color:#666;
+  line-height:1.8;
+}
+
+.success-points{
+  margin-top:20px;
+}
+
+.success-points div{
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+
+@media(max-width:768px){
+
+  .success-card{
+    flex-direction:column;
+    text-align:center;
+    gap:25px;
+  }
+
+  .success-left{
+    width:100%;
+    min-width:auto;
+  }
+
+  .big-number{
+    font-size:60px;
+  }
+
+  .success-right h2{
+    font-size:26px;
+  }
+}
 
 
 

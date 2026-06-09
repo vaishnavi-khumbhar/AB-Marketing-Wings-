@@ -764,12 +764,29 @@ letter-spacing: -1px;
 }
 
 .why-img-box img {
-  width: 100%;
-  max-width: 430px;
-  position: relative;
+   width: 450px !important;
+  height: 450px !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  border-radius: 25px;
   z-index: 2;
   filter: drop-shadow(0 30px 40px rgba(0,0,0,0.12));
   animation: floatImage 5s ease-in-out infinite;
+}
+@media (max-width: 576px) {
+
+  .why-img-box {
+    padding: 0 !important;
+  }
+
+  .why-img-box img {
+    width: 780px !important;
+    height: 240px !important;
+    max-width: 320px !important;
+    object-fit: cover !important;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @keyframes floatImage {
