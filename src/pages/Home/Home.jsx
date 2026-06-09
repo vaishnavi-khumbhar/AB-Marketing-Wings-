@@ -715,8 +715,7 @@ function Home() {
       </p>
       <div className="chips">
         <span className="chip ch3">Meta & Google Ads</span>
-        <span className="chip ch3">Creative Design</span>
-        <span className="chip ch3">Social Media</span>
+       
       </div>
     </div>
   </div>
@@ -743,8 +742,6 @@ function Home() {
         works — so your ROI keeps improving over time.
       </p>
       <div className="chips">
-        <span className="chip ch4">Performance Tracking</span>
-        <span className="chip ch4">ROI Optimization</span>
         <span className="chip ch4">Scale Up</span>
       </div>
     </div>
