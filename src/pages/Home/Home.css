@@ -1851,7 +1851,7 @@ letter-spacing: -1px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   transition: transform 0.35s, box-shadow 0.35s;
 
-   min-height: 430px;
+   min-height: 500px;
   display: flex;
   flex-direction: column;
 }
