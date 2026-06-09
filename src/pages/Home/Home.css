@@ -1963,7 +1963,6 @@ letter-spacing: -1px;
 }
 
 .card {
-  width: calc(50% - 44px);
   background: #fff;
   border-radius: 22px;
   overflow: hidden;
