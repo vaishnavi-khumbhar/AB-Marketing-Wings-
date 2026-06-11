@@ -169,15 +169,24 @@ About Advertising and Branding Marketing
         </div>
 
       <p>
-  Advertising & Branding Marketing is a full-service digital marketing agency dedicated to helping businesses grow through innovative marketing strategies and creative branding solutions.
-Our expertise includes social media marketing, search engine optimization (SEO), Meta advertising, Google Ads management, website design and development, branding, and content creation.
+  Every business starts with a dream.
+A dream to create something meaningful.
+A dream to serve people, solve problems, and build a legacy.
+But when the world changed in 2020, many businesses found themselves facing an unexpected challenge.
 
 </p>
 
-<p>
-  We believe every business deserves a strong digital presence. Our team focuses on creating customized marketing strategies that attract the right audience, generate quality leads, and improve overall business performance.
-          Whether you are a startup, local business, healthcare provider, educational institute, real estate company, or established enterprise, we help you build a powerful online presence and achieve sustainable growth.
+<p>Storefronts closed, customer interactions disappeared, and traditional ways of doing business were no longer enough.
+While some brands adapted quickly, many struggled to find their place in the digital world.
+What we witnessed during those years was powerful.
+Businesses that embraced digital platforms continued to connect with their customers, build trust, and grow despite uncertainty. Those who stayed invisible often found it difficult to survive.
+That realization sparked an idea.</p> 
 
+
+<p>
+ In 2024, A B Marketing Wings was born with a simple mission:
+To help businesses become visible, memorable, and future-ready.
+We believe every business has a unique story worth telling. 
 
 </p>
 
@@ -198,8 +207,9 @@ Our expertise includes social media marketing, search engine optimization (SEO),
       <span>Why Choose Us</span>
       <h2>Why Choose AB Marketing?</h2>
       <p>
-        We don't just run campaigns — we create strategies that drive
-        real business growth and long-term success.
+        Digital marketing is not just about likes, followers, or running advertisements.
+It's about creating meaningful connections between your business and the people who matter most.
+
       </p>
     </div>
 
@@ -208,40 +218,48 @@ Our expertise includes social media marketing, search engine optimization (SEO),
       <div className="ab-why-item">
         <div className="ab-check">✓</div>
         <div>
-          <h3>Results Driven Approach</h3>
-          <p>Every campaign is designed with measurable business goals.</p>
+          <h3>We Build Brands, Not Just Campaigns
+</h3>
+          <p>A successful business is built on trust and recognition. </p>
         </div>
       </div>
 
       <div className="ab-why-item">
         <div className="ab-check">✓</div>
         <div>
-          <h3>Creative Excellence</h3>
-          <p>Designs and content that make your brand stand out.</p>
+          <h3>Strategies Designed Around Your Business
+</h3>
+          <p>No two businesses are the same.  That's why we develop customized marketing strategies tailored to your goals, industry, audience, and growth stage.
+</p>
         </div>
       </div>
 
       <div className="ab-why-item">
         <div className="ab-check">✓</div>
         <div>
-          <h3>Multi-Channel Expertise</h3>
-          <p>Meta Ads, Google Ads, SEO, Social Media & Website Development.</p>
+          <h3>Creativity That Creates Impact
+</h3>
+          <p>From content and design to videos and advertising campaigns, we combine creativity with strategy to help your brand stand out in a crowded digital marketplace.</p>
         </div>
       </div>
 
       <div className="ab-why-item">
         <div className="ab-check">✓</div>
         <div>
-          <h3>Transparent Reporting</h3>
-          <p>Know exactly where your marketing investment goes.</p>
+          <h3>Data-Driven Growth
+</h3>
+          <p>Every decision we make is backed by insights and performance data. Our focus is not just on visibility but on generating measurable business results.
+</p>
         </div>
       </div>
 
       <div className="ab-why-item">
         <div className="ab-check">✓</div>
         <div>
-          <h3>Dedicated Support</h3>
-          <p>Quick communication and continuous optimization.</p>
+          <h3>A Partner Invested in Your Success
+</h3>
+          <p>We don't see ourselves as a service provider. We see ourselves as an extension of your team, committed to helping your business grow at every stage.
+.</p>
         </div>
       </div>
 
