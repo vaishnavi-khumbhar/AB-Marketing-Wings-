@@ -86,18 +86,17 @@ useEffect(() => {
           <div className="ab-hero-content">
 
             <span className="ab-hero-badge">
-              Leading Digital Marketing Agency In Pune
+              About Us
+
             </span>
 
             <h1>
-              Turn Attention Into Customers
-              <span> And Brands Into Market Leaders</span>
+               About Advertising and
+              <span>  Branding Marketing
+</span>
             </h1>
 
-            <p>
-              
-              We transform ambitious brands into digital success stories.
-            </p>
+            
 
             <div className="ab-hero-btns">
 
@@ -134,12 +133,10 @@ useEffect(() => {
 
       {/* Heading */}
       <div className="col-12 order-1 d-lg-none text-center">
-        <span className="ab-section-tag">
-          ABOUT US
-        </span>
+        
 
         <h2>
-         Creative Marketing Solutions   
+        About Advertising & Branding Marketing
 
         </h2>
       </div>
@@ -154,8 +151,8 @@ useEffect(() => {
 
          {/* ADD HERE */}
   <div className="owner-info">
-    <h4>Owner: Arti Hulle</h4>
-    <span>Founded in 2024</span>
+    <h4>Founder : Arti Hulle</h4>
+    <span>Founded in  2025 </span>
   </div>
       </div>
 
@@ -164,35 +161,88 @@ useEffect(() => {
 
         {/* Desktop Heading */}
         <div className="d-none d-lg-block">
-          <span className="ab-section-tag">
-            ABOUT US
-          </span>
-
+         
           <h2>
-Creative Marketing Solutions   
+About Advertising and Branding Marketing
+  
        </h2>
         </div>
 
       <p>
-  At AB Marketing Wings, we help businesses build strong and memorable brands.
-  Through creative advertising, branding, and marketing strategies, we connect
-  businesses with the right audience and drive growth.
+  Advertising & Branding Marketing is a full-service digital marketing agency dedicated to helping businesses grow through innovative marketing strategies and creative branding solutions.
+Our expertise includes social media marketing, search engine optimization (SEO), Meta advertising, Google Ads management, website design and development, branding, and content creation.
+
 </p>
 
 <p>
-  Based in Pune, our team combines creativity, innovation, and data-driven
-  insights to deliver impactful digital and offline marketing solutions.
+  We believe every business deserves a strong digital presence. Our team focuses on creating customized marketing strategies that attract the right audience, generate quality leads, and improve overall business performance.
+          Whether you are a startup, local business, healthcare provider, educational institute, real estate company, or established enterprise, we help you build a powerful online presence and achieve sustainable growth.
+
+
 </p>
 
-        <div className="ab-growth-points">
-          <div>✔ Creative Advertising Campaigns</div>
-          <div>✔ Professional Branding Solutions</div>
-          <div>✔ Digital & Social Media Marketing</div>
-          <div>✔ High-Quality Lead Generation</div>
-          <div>✔ Increased Brand Awareness</div>
-          <div>✔ Measurable Business Growth</div>
-        </div>
 
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+{/* why chosse  */}
+<section className="ab-why-section">
+  <div className="container">
+
+    <div className="ab-why-header">
+      <span>Why Choose Us</span>
+      <h2>Why Choose AB Marketing?</h2>
+      <p>
+        We don't just run campaigns — we create strategies that drive
+        real business growth and long-term success.
+      </p>
+    </div>
+
+    <div className="ab-why-grid">
+
+      <div className="ab-why-item">
+        <div className="ab-check">✓</div>
+        <div>
+          <h3>Results Driven Approach</h3>
+          <p>Every campaign is designed with measurable business goals.</p>
+        </div>
+      </div>
+
+      <div className="ab-why-item">
+        <div className="ab-check">✓</div>
+        <div>
+          <h3>Creative Excellence</h3>
+          <p>Designs and content that make your brand stand out.</p>
+        </div>
+      </div>
+
+      <div className="ab-why-item">
+        <div className="ab-check">✓</div>
+        <div>
+          <h3>Multi-Channel Expertise</h3>
+          <p>Meta Ads, Google Ads, SEO, Social Media & Website Development.</p>
+        </div>
+      </div>
+
+      <div className="ab-why-item">
+        <div className="ab-check">✓</div>
+        <div>
+          <h3>Transparent Reporting</h3>
+          <p>Know exactly where your marketing investment goes.</p>
+        </div>
+      </div>
+
+      <div className="ab-why-item">
+        <div className="ab-check">✓</div>
+        <div>
+          <h3>Dedicated Support</h3>
+          <p>Quick communication and continuous optimization.</p>
+        </div>
       </div>
 
     </div>
@@ -202,13 +252,12 @@ Creative Marketing Solutions
 
 
 
+
+
       {/* Solutions */}
       
   <section className="ab-solutions-section">
-  <div className="sol-ring sr1"></div>
-  <div className="sol-ring sr2"></div>
-  <div className="sol-blob sb1"></div>
-  <div className="sol-blob sb2"></div>
+  
 
   <div className="container">
     <div className="sol-hd">
@@ -337,8 +386,7 @@ Creative Marketing Solutions
       {/* Expertise */}
      {/* Expertise */}
 <section className="ab-expertise-section">
-  <div className="expertise-blur blur1"></div>
-  <div className="expertise-blur blur2"></div>
+  
 
   <div className="container">
 
@@ -346,7 +394,7 @@ Creative Marketing Solutions
       <span className="ab-solutions-tag">Our Expertise</span>
 
       <h2>
-        Driving Growth Through <span>Creative Excellence</span>
+       <span>  Driving Growth Through Creative Excellence</span>
       </h2>
 
       <p>

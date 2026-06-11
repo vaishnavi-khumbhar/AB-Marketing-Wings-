@@ -8,11 +8,10 @@
   height: 410px;
 
   background:linear-gradient(
-    135deg,
-    #13286d,
-    #0b2c66,
-    #0f4cc7
-  );
+    135deg, #1e3a5f,
+  #0070B8,
+  #1e3a5f);
+  
   color:#fff;
 }
 
@@ -29,7 +28,7 @@
 .contact-circle1{
   width:380px;
   height:380px;
-  background:#ff6b00;
+  background:#ff7a00;
   top:-120px;
   left:-100px;
 }
@@ -37,7 +36,7 @@
 .contact-circle2{
   width:320px;
   height:320px;
-  background:#00c3ff;
+  background:#0070B8;
   bottom:-120px;
   right:-100px;
   animation-delay:2s;
@@ -213,58 +212,7 @@
   z-index: 0;
 }
 
-/* TOP RIGHT BIG CIRCLE */
-.contact-form-section::before {
-  width: 500px;
-  height: 500px;
-  top: -200px;
-  right: -200px;
-}
 
-/* BOTTOM LEFT BIG CIRCLE */
-.contact-form-section::after {
-  width: 550px;
-  height: 550px;
-  bottom: -250px;
-  left: -250px;
-}
-
-/* 3RD CIRCLE (TOP LEFT SMALL) */
-.contact-form-section .circle-3 {
-  position: absolute;
-  top: 80px;
-  left: 80px;
-
-  width: 180px;
-  height: 180px;
-
-  background: radial-gradient(circle, #ff8c42, #ff6600);
-  border-radius: 50%;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-/* 4TH CIRCLE (CENTER RIGHT SMALL) */
-.contact-form-section .circle-4 {
-  position: absolute;
-  top: 45%;
-  right: 120px;
-
-  width: 140px;
-  height: 140px;
-
-  background: radial-gradient(circle, #ffb347, #ff6600);
-  border-radius: 50%;
-  opacity: 0.12;
-  z-index: 0;
-}
-
-/* CONTENT ABOVE BACKGROUND */
-.contact-form-card,
-.contact-image {
-  position: relative;
-  z-index: 1;
-}
 
 .contact-form-card {
   background: rgba(255, 255, 255, 0.08);
@@ -295,8 +243,8 @@
   text-align: center;
   background: linear-gradient(
     90deg,
-    #5460cf,
-    #5460cf
+    #0070B8,
+    #0070B8
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -366,7 +314,8 @@ textarea.custom-input {
   border-radius: 12px;
   background: linear-gradient(
     135deg,
-    #dd7129,
+    #ff7a00
+,
     #ff8c42
   );
   color: white;
@@ -381,7 +330,8 @@ textarea.custom-input {
 }
 
 .text-danger {
-  color: #ff6b6b !important;
+  color: #ff7a00
+ !important;
 }
 
 @media (max-width: 768px) {
@@ -425,25 +375,6 @@ textarea.custom-input {
     padding: 12px;
   }
 
-  /* background circles reduce (IMPORTANT) */
-  .contact-form-section::before {
-    width: 250px;
-    height: 250px;
-    top: -120px;
-    right: -120px;
-  }
-
-  .contact-form-section::after {
-    width: 280px;
-    height: 280px;
-    bottom: -140px;
-    left: -140px;
-  }
-
-  .contact-form-section .circle-3,
-  .contact-form-section .circle-4 {
-    display: none; /* mobile clean look */
-  }
 
   .contact-image img {
     max-width: 260px;
@@ -501,8 +432,10 @@ textarea.custom-input {
 .submit-btn {
   background: linear-gradient(
     135deg,
-    #e6893d,
-    #f57803
+    #ff7a00
+,
+    #ff7a00
+
   );
 
   color: white;
@@ -590,53 +523,12 @@ max-width:300px;
 
 .orange-contact-section {
   position: relative;
-  background: linear-gradient(
-    135deg,
-    #f1f3ff 0%,
-    #ffe8cc 100%
-  );
+  
+  
   overflow: hidden;
 }
 
 /* BLUE HALF CIRCLE - TOP RIGHT */
-.orange-contact-section::before {
-  content: "";
-  position: absolute;
-  top: -220px;
-  right: -220px;
-
-  width: 500px;
-  height: 500px;
-
-  background: radial-gradient(circle, #1e3a8a, #06b6d4);
-  border-radius: 50%;
-
-  opacity: 0.25;
-  z-index: 0;
-}
-
-/* BLUE HALF CIRCLE - BOTTOM LEFT */
-.orange-contact-section::after {
-  content: "";
-  position: absolute;
-  bottom: -240px;
-  left: -240px;
-
-  width: 550px;
-  height: 550px;
-
-  background: radial-gradient(circle, #06b6d4, #1e3a8a);
-  border-radius: 50%;
-
-  opacity: 0.2;
-  z-index: 0;
-}
-
-/* content always above background */
-.orange-contact-section > * {
-  position: relative;
-  z-index: 1;
-}
 
 /* ===== Card ===== */
 
@@ -766,62 +658,8 @@ max-width:300px;
   overflow: hidden;
 }
 
-/* COMMON ORANGE BUBBLE STYLE */
-.social-connect-section::before,
-.social-connect-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ff6600, #ffb347);
-  opacity: 0.18;
-  z-index: 0;
-}
 
-/* 1st TOP RIGHT BIG HALF CIRCLE */
-.social-connect-section::before {
-  width: 450px;
-  height: 450px;
-  top: -200px;
-  right: -200px;
-}
 
-/* 2nd BOTTOM LEFT BIG HALF CIRCLE */
-.social-connect-section::after {
-  width: 500px;
-  height: 500px;
-  bottom: -220px;
-  left: -220px;
-}
-
-/* 3rd SMALL FLOAT TOP LEFT */
-.social-connect-section .bubble-3 {
-  position: absolute;
-  top: 80px;
-  left: 60px;
-
-  width: 160px;
-  height: 160px;
-
-  background: radial-gradient(circle, #ff8c42, #ff6600);
-  border-radius: 50%;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-/* 4th SMALL FLOAT CENTER RIGHT */
-.social-connect-section .bubble-4 {
-  position: absolute;
-  top: 45%;
-  right: 100px;
-
-  width: 140px;
-  height: 140px;
-
-  background: radial-gradient(circle, #ffb347, #ff6600);
-  border-radius: 50%;
-  opacity: 0.12;
-  z-index: 0;
-}
 
 /* content always above */
 .social-connect-section > * {
@@ -829,13 +667,14 @@ max-width:300px;
   z-index: 1;
 }
 .social-subtitle {
-  display: inline-block;
+ display: inline-block;
   padding: 8px 20px;
   background: rgba(79,70,229,.1);
-  color: rgb(103, 103, 226);
+  color: #0070B8;
   border-radius: 30px;
   font-weight: 600;
   margin-bottom: 15px;
+
 }
 
 .social-main-title {

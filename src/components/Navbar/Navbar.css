@@ -22,22 +22,18 @@
   margin-right: 15px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 20px;
 }
 
 .top-right a {
   color: #ff9a3c;
-  margin-left: 12px;
+  margin-left: 25px; /* 12px -> 20px */
   font-size: 16px;
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
 }
 
-.top-right a:hover {
-  color: #ff7a18;
-  transform: translateY(-2px);
-}
 
 /* ==========================
    NAVBAR — STICKY FIX
@@ -107,32 +103,17 @@
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
-    font-family: 'Urbanist', sans-serif;
+  font-family: 'Urbanist', sans-serif;
 
+  color: orange; /* Black Color */
 
-  background: linear-gradient(
-    90deg,
-    #ff6b00,
-    #ff9800,
-    #ffd700,
-    #ff6b00
-  );
-  background-size: 300% auto;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  animation:
-    textShine 5s linear infinite,
-    textFloat 3s ease-in-out infinite;
-
+  animation: textFloat 3s ease-in-out infinite;
   transition: 0.4s ease;
 }
 
 .logo:hover .logo-text {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 12px rgba(255, 152, 0, 0.45));
+  filter: drop-shadow(0 0 12px rgba(219, 156, 38, 0.45));
 }
 
 .logo-text::after {
@@ -143,7 +124,7 @@
   width: 100%;
   height: 2px;
   border-radius: 50px;
-  background: linear-gradient(90deg, transparent, #ff9800, transparent);
+  background: linear-gradient(90deg, transparent, #070707, transparent);
   animation: lineMove 3s linear infinite;
 }
 
@@ -163,58 +144,25 @@
   padding: 7px 14px !important;
   border-radius: 25px;
   overflow: hidden;
-  transition: 0.35s ease;
+  transition: all 0.35s ease;
   font-family: 'Urbanist', sans-serif;
-
 }
 
-.nav-link::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff6b00, #ff9800);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.35s ease;
-  border-radius: 25px;
-  z-index: -1;
-}
-
-.nav-link:hover::before {
-  transform: scaleX(1);
-}
-
+/* Hover Effect */
 .nav-link:hover {
-  color: #fff !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(255, 107, 0, 0.25);
+  color: #ff7a00 !important;
 }
-
-.nav-link.active {
-  color: #fff !important;
-  background: linear-gradient(135deg, #ff6b00, #ff9800);
-  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.25);
-}
-
 /* ==========================
    CONTACT BUTTON
 ========================== */
 
 .btn-contact {
-  background: linear-gradient(135deg, #ff7a18, #ffb347) !important;
-  color: #fff !important;
+  color: #080808 !important;
   padding: 8px 18px !important;
   border-radius: 25px !important;
 }
 
-.btn-contact:hover {
-  transform: scale(1.05) !important;
-  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3) !important;
-}
 
-.btn-contact::before {
-  display: none !important;
-}
 
 /* ==========================
    TOGGLER
@@ -277,10 +225,8 @@
 
 @media (max-width: 768px) {
 
-  .topbar-content {
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
+  .topbar {
+    display: none;
   }
 
   .logo-text {
@@ -295,8 +241,7 @@
 @media (max-width: 576px) {
 
   .topbar {
-    font-size: 11px;
-    padding: 5px 0;
+    display: none;
   }
 
   .custom-navbar .container {
@@ -374,3 +319,345 @@
   color:#fff;
   text-decoration:none;
 }
+
+
+
+/* service nav code */
+/* ===========================
+   MEGA MENU
+=========================== */
+
+/* ===========================
+   SERVICES MEGA MENU
+=========================== */
+
+.mega-menu-parent {
+  position: relative;
+}
+
+/* ✅ नवीन code - हा लावा */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: auto;          /* left: 50% REMOVE */
+  right: 0;            /* Right side la align */
+  transform: none;     /* translateX(-50%) REMOVE */
+
+  width: 700px;
+  max-width: 90vw;
+
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+/* Desktop Hover */
+@media (min-width: 992px) {
+  .mega-menu-parent:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px); /* फक्त हेच ठेवा */
+  }
+}
+
+/* Columns */
+.mega-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mega-column a {
+  display: block;
+
+  padding: 12px 15px;
+
+  text-decoration: none;
+
+  color: #24345d;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.mega-column a:hover {
+  background: rgba(244, 123, 75, 0.1);
+
+  color: #f47b4b;
+
+  transform: translateX(5px);
+}
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width: 991px) {
+
+  .mega-menu {
+    position: static;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    transform: none;
+
+    margin-top: 12px;
+
+    padding: 18px;
+
+    display: none;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    opacity: 1;
+    visibility: visible;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .mega-menu.show {
+    display: grid;
+  }
+
+  .mega-column {
+    width: 100%;
+  }
+
+  .mega-column a {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 14px;
+
+    font-size: 15px;
+
+    border-radius: 12px;
+  }
+
+  .mega-column a:hover {
+    transform: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   SIDEBAR TOGGLE BUTTON
+========================== */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ff7a00;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-toggle:hover {
+  background: rgba(255, 122, 0, 0.1);
+}
+
+/* ==========================
+   OVERLAY
+========================== */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================
+   SIDEBAR DRAWER
+========================== */
+.sidebar-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  z-index: 3000;
+  padding: 20px;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+  transition: right 0.35s ease;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-drawer.open {
+  right: 0;
+}
+
+/* ==========================
+   CLOSE BUTTON
+========================== */
+.sidebar-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  align-self: flex-end;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-close:hover {
+  background: rgba(255, 122, 0, 0.1);
+  color: #ff7a00;
+}
+
+/* ==========================
+   BRAND
+========================== */
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.sidebar-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.sidebar-company-name {
+  font-size: 19px;
+  font-weight: 800;
+  color: #ff7a00;
+  font-family: 'Urbanist', sans-serif;
+  margin: 0;
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 8px 0;
+}
+
+/* ==========================
+   DETAILS
+========================== */
+.sidebar-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 9px 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar-detail-item:hover {
+  background: rgba(255, 122, 0, 0.08);
+  color: #ff7a00;
+}
+
+.sidebar-icon {
+  color: #ff7a00;
+  font-size: 15px;
+  min-width: 18px;
+}
+
+/* ==========================
+   SOCIAL
+========================== */
+.sidebar-social-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 4px 0 8px;
+}
+
+.sidebar-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-icon.facebook  { background: #1877f2; }
+.social-icon.linkedin  { background: #0077b5; }
+.social-icon.whatsapp  { background: #25d366; }
+.social-icon.youtube   { background: #ff0000; }
+

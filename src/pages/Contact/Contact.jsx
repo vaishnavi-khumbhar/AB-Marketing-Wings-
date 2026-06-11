@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 emailjs.init("ttpt2F7B9_vK1v1GV");
 
 const contactData = [
-  { icon: <FaPhoneAlt />, title: "Call Us", value: "+91 70585 27549" },
+  { icon: <FaPhoneAlt />, title: "Call Us Today", value: "+91 70585 27549" },
   { icon: <FaEnvelope />, title: "Email Us", value: "abmarketingwings@gmail.com" },
   {
     icon: <FaMapMarkerAlt />,
@@ -90,12 +90,13 @@ function Contact() {
   return (
     <>
       <section className="contact-hero">
-        <div className="contact-floating-circle contact-circle1"></div>
-        <div className="contact-floating-circle contact-circle2"></div>
+       
         <div className="contact-hero-content">
           <div className="contact-badge">GET IN TOUCH</div>
           <h1>Contact <span>Us</span></h1>
-          <p>Let's discuss your business goals and create a growth strategy that delivers real results.</p>
+          <p>Contact Advertising & Branding Marketing.
+          Ready to grow your business with professional digital marketing solutions?
+</p>
         </div>
       </section>
 
@@ -115,7 +116,9 @@ function Contact() {
               <div className="contact-form-card">
                 <span className="contact-mini-title">CONTACT US</span>
                 <h2>Let's Grow Your Business</h2>
-                <p>Fill out the form below and our team will contact you shortly.</p>
+              
+                <p>Fill out the form below and our team will contact you shortly.
+</p>
 
                 {success && (
                   <div className="alert alert-success">

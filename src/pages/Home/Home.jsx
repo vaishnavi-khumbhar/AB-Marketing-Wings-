@@ -47,6 +47,64 @@ function Home() {
   }
 ];
 
+
+
+ // our client logo
+ const clients = [
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Avicare.png`,
+    name: "Avicare",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Balaji Electronics.png`,
+    name: "Balaji Electronics",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Elite Landmarks.png`,
+    name: "Elite Landmarks",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Finance Direction.png`,
+    name: "Finance Direction",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Gavran Eggswala.png`,
+    name: "Gavran Eggswala",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Lifetime Number.png`,
+    name: "Lifetime Number",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Motion Solapur.png`,
+    name: "Motion Solapur",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Oviyas.png`,
+    name: "Oviyas",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Shipal Line.png`,
+    name: "Shipal Line",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Swami Software.png`,
+    name: "Swami Software",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Unity Hospital.png`,
+    name: "Unity Hospital",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Varad Clinic.png`,
+    name: "Varad Clinic",
+  },
+  {
+    logo: `${import.meta.env.BASE_URL}client_logo/Voltaic Electric.png`,
+    name: "Voltaic Electric",
+  },
+];
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -575,6 +633,29 @@ function Home() {
 
 
 
+{
+/*  6 our client logos */}
+<section className="clients-section">
+
+   <span className="client-tag">Our Clients</span>
+
+  <h2 className="clients-title">Our Happy Clients</h2>
+
+  <div className="clients-slider">
+    <div className="slide-track">
+      {[...clients, ...clients].map((client, index) => (
+        <div className="client-item" key={index}>
+          <img
+            className="client-logo"
+            src={client.logo}
+            alt={client.name}
+          />
+          <div className="client-name">{client.name}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
 
 
@@ -590,7 +671,7 @@ function Home() {
 
         <div className="cta-text">
           <h2>
-            Stop Losing <span>Customers Online</span>
+            Stop Losing Customers Online
           </h2>
 
           <p>
@@ -604,14 +685,16 @@ function Home() {
               className="primary-btn"
               onClick={() => navigate("/contact")}
             >
-              Book Free Strategy Call
+              Get Free Consultation
+
             </button>
 
             <button
               className="secondary-btn"
               onClick={() => navigate("/contact")}
             >
-              Get Free Audit Report
+              Talk to an Expert
+
             </button>
             
           </div>
@@ -626,151 +709,10 @@ function Home() {
 
 
 
-{/* 6. HOW WE WORK */}
-<section className="work-section">
-  <div className="deco-ring r1"></div>
-  <div className="deco-ring r2"></div>
-
-  <div className="work-header">
-    <span className="expertise-tag">Our Process</span>
-    <h2 className="section-title">How We <em>Actually</em><br/>Grow Your Brand</h2>
-    <p>A proven 4-step advertising & branding system that builds visibility, drives leads, and delivers real business results.</p>
-  </div>
-
-  <div className="steps-wrap">
-    <div className="vline"></div>
-
-{/* Step 1 - LEFT */}
-<div className="step left">
-  <div className="card">
-    <img
-      className="card-img"
-      src={`${import.meta.env.BASE_URL}Home_Page/Step-1.jpg`}
-      alt="Discovery"
-    />
-    <div className="card-body">
-      <div className="snum s1c">Step 01</div>
-      <h3>Discover</h3>
-      <p>
-        We study your business, target audience, and competitors to uncover
-        the best opportunities for your brand to stand out.
-      </p>
-      <div className="chips">
-        <span className="chip ch1">Brand Audit</span>
-        <span className="chip ch1">Audience Research</span>
-        <span className="chip ch1">Competitor Analysis</span>
-      </div>
-    </div>
-  </div>
-  <div className="mid-node">
-    <div className="node n1"><FaSearch /></div>
-    <span className="node-label">01</span>
-  </div>
-  <div className="empty"></div>
-</div>
-
-{/* Step 2 - RIGHT */}
-<div className="step right">
-  <div className="card">
-    <img
-      className="card-img"
-      src={`${import.meta.env.BASE_URL}Home_Page/Step-2.jpg`}
-      alt="Planning"
-    />
-    <div className="card-body">
-      <div className="snum s2c">Step 02</div>
-      <h3>Strategize</h3>
-      <p>
-        We build a custom advertising and branding strategy — defining your
-        message, creatives, channels, and campaign goals.
-      </p>
-      <div className="chips">
-        <span className="chip ch2">Ad Strategy</span>
-        <span className="chip ch2">Brand Positioning</span>
-        <span className="chip ch2">Campaign Planning</span>
-      </div>
-    </div>
-  </div>
-  <div className="mid-node">
-    <div className="node n2"><FaMap /></div>
-    <span className="node-label">02</span>
-  </div>
-  <div className="empty"></div>
-</div>
-
-{/* Step 3 - LEFT */}
-<div className="step left">
-  <div className="card">
-    <img
-      className="card-img"
-      src={`${import.meta.env.BASE_URL}Home_Page/Step-3.jpg`}
-      alt="Launch"
-    />
-    <div className="card-body">
-      <div className="snum s3c">Step 03</div>
-      <h3>Launch</h3>
-      <p>
-        We execute high-impact campaigns across Meta, Google, Instagram and
-        more — with compelling creatives that convert.
-      </p>
-      <div className="chips">
-        <span className="chip ch3">Meta & Google Ads</span>
-       
-      </div>
-    </div>
-  </div>
-  <div className="mid-node">
-    <div className="node n3"><FaRocket /></div>
-    <span className="node-label">03</span>
-  </div>
-  <div className="empty"></div>
-</div>
-
-{/* Step 4 - RIGHT */}
-<div className="step right">
-  <div className="card">
-    <img
-      className="card-img"
-      src={`${import.meta.env.BASE_URL}Home_Page/Step-4.jpg`}
-      alt="Grow & Scale"
-    />
-    <div className="card-body">
-      <div className="snum s4c">Step 04</div>
-      <h3>Grow & Scale</h3>
-      <p>
-        We track every rupee spent, optimize campaigns weekly, and scale what
-        works — so your ROI keeps improving over time.
-      </p>
-      <div className="chips">
-        <span className="chip ch4">Scale Up</span>
-      </div>
-    </div>
-  </div>
-  <div className="mid-node">
-    <div className="node n4"><FaChartLine /></div>
-    <span className="node-label">04</span>
-  </div>
-  <div className="empty"></div>
-</div>
-
-  </div>
-
-  {/* Stats Bar */}
-  <div className="stats-bottom">
-    <div className="stat-row">
-      <div className="stat"><div className="stat-n s1c">3x</div><div className="stat-l">Avg Lead Growth</div></div>
-      <div className="stat"><div className="stat-n s2c">95%</div><div className="stat-l">Client Retention</div></div>
-      <div className="stat"><div className="stat-n s3c">7d</div><div className="stat-l">Campaign Go-Live</div></div>
-      <div className="stat"><div className="stat-n s4c">4x</div><div className="stat-l">Avg Ad ROAS</div></div>
-    </div>
-  </div>
-
-</section>
 
 {/*  7. TESTIMONIALS */}
 <section className="testimonial-section">
-<div className="blue-spot blue-spot-1"></div>
-<div className="blue-spot blue-spot-2"></div>
+
 
   <div className="testimonial-header">
     <span className="review-tag"> Google Reviews</span>

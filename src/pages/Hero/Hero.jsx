@@ -5,9 +5,9 @@ import "./Hero.css";
 const slides = [
   {
     eyebrow: "Digital Growth Partner",
-    title: ["Turn Attention Into ", "Customers", ""],
+    title: ["Best Digital Marketing Agency in Pune for ", "Business Growth", ""],
     accentIdx: 1,
-    desc: "We blend creative storytelling, performance marketing, and data-driven strategies to help brands scale faster, smarter, and stronger.",
+    desc: "Transform your business with result-driven Digital Marketing, SEO, Social Media Marketing, Google Ads, Meta Ads, Branding, and Website Development services.",
     btn1: "Book Free Consultation",
     btn2: "Our Expertise",
     btn1Route: "/contact",
@@ -19,22 +19,22 @@ const slides = [
       { val: "100+", lbl: "Brands Empowered", pos: 2 },
     ],
     theme: {
-      bg: "linear-gradient(135deg,#1c0a00 0%,#431407 100%)",
-      blob1: "#f97316",
+bg: "linear-gradient(135deg,#0f0f0f 0%,#1a1a1a 40%,#2d1b12 100%)",
+      blob1: "#fca364",
       blob2: "#fb923c",
-      accent: "#f97316",
-      accentLight: "#fb923c",
-      eyebrow: "#fed7aa",
-      desc: "#ffedd5",
-      icon: "#fb923c",
+     accent: "#fca364",
+accentLight: "#fb923c",
+eyebrow: "#fdba74",
+desc: "#e5e7eb",
+icon: "#fb923c",
       glow: "rgba(249,115,22,0.3)",
       iconBg: "rgba(249,115,22,0.15)",
       chips: [
-        "rgba(249,115,22,0.75)",
+        "rgba(250, 154, 85, 0.75)",
         "rgba(28,10,0,0.9)",
         "rgba(249,115,22,0.6)"
       ],
-      bar: "#f97316",
+      bar: "#fca364",
     },
   },
 
@@ -54,23 +54,30 @@ const slides = [
       { val: "3X", lbl: "Brand Recall", pos: 2 },
     ],
     theme: {
-      bg: "linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%)",
-      blob1: "#4f46e5",
-      blob2: "#818cf8",
-      accent: "#6366f1",
-      accentLight: "#818cf8",
-      eyebrow: "#a5b4fc",
-      desc: "#e0e7ff",
-      icon: "#818cf8",
-      glow: "rgba(99,102,241,0.3)",
-      iconBg: "rgba(99,102,241,0.15)",
-      chips: [
-        "rgba(99,102,241,0.75)",
-        "rgba(49,46,129,0.9)",
-        "rgba(99,102,241,0.6)"
-      ],
-      bar: "#6366f1",
-    },
+  bg: "linear-gradient(135deg,#0f0f0f 0%,#1a1a1a 40%,#1b2340 100%)",
+
+  blob1: "#93c5fd",
+  blob2: "#88b8f1",
+
+  accent: "#93c5fd",
+  accentLight: "#60a5fa",
+
+  eyebrow: "#bfdbfe",
+  desc: "#e5e7eb",
+
+  icon: "#80b7fa",
+
+  glow: "rgba(96,165,250,0.30)",
+  iconBg: "rgba(96,165,250,0.15)",
+
+  chips: [
+    "rgba(147,197,253,0.75)",
+    "rgba(15,23,42,0.90)",
+    "rgba(96,165,250,0.60)"
+  ],
+
+  bar: "#93c5fd",
+},
   },
 
   {
@@ -88,23 +95,23 @@ const slides = [
       { val: "40%", lbl: "Lower CPL", pos: 1 },
       { val: "4.8★", lbl: "Client Rating", pos: 2 },
     ],
-    theme: {
-       bg: "linear-gradient(135deg,#1c0a00 0%,#431407 100%)",
-      blob1: "#f97316",
+     theme: {
+bg: "linear-gradient(135deg,#0f0f0f 0%,#1a1a1a 40%,#2d1b12 100%)",
+      blob1: "#fca364",
       blob2: "#fb923c",
-      accent: "#f97316",
-      accentLight: "#fb923c",
-      eyebrow: "#fed7aa",
-      desc: "#ffedd5",
-      icon: "#fb923c",
+     accent: "#fca364",
+accentLight: "#fb923c",
+eyebrow: "#fdba74",
+desc: "#e5e7eb",
+icon: "#fb923c",
       glow: "rgba(249,115,22,0.3)",
       iconBg: "rgba(249,115,22,0.15)",
       chips: [
-        "rgba(249,115,22,0.75)",
+        "rgba(250, 154, 85, 0.75)",
         "rgba(28,10,0,0.9)",
         "rgba(249,115,22,0.6)"
       ],
-      bar: "#f97316",
+      bar: "#fca364",
     },
   },
 ];
@@ -167,7 +174,14 @@ export default function Hero() {
   const t = slides[cur].theme;
 
   return (
-    <section style={{ width: "100%", minHeight: 600, position: "relative", overflow: "hidden", background: t.bg, transition: "background 0.7s", fontFamily: "'Inter', sans-serif" }}>
+    <section style={{   width: "100%",
+    minHeight: 600,
+    position: "relative",
+    overflow: "hidden",
+    background: t.bg,
+    transition: "background 0.7s",
+    fontFamily: "'Inter', sans-serif",
+    borderRadius: "0 0 40px 40px", }}>
       <style>{floatKeyframes}</style>
 
       {/* Blobs */}
@@ -180,11 +194,17 @@ export default function Hero() {
           <div key={i} className="hero-inner" style={{ minWidth: "100%", minHeight: 520, display: "flex", alignItems: "center", padding: "0 62px", position: "relative", zIndex: 2 }}>
 
             {/* Left */}
-            <div className="hero-col-l" style={{ width: "50%", display: "flex", flexDirection: "column", justifyContent: "center", paddingRight: 24 }}>
-              <div style={{ fontSize: 15.5, fontWeight: 800, letterSpacing: 3, textTransform: "uppercase", marginBottom: 16, color: s.theme.eyebrow }}>
+            <div className="hero-col-l" style={{ width: "58%",
+    paddingRight: 20, display: "flex", flexDirection: "column", justifyContent: "center", paddingRight: 24 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 3, textTransform: "uppercase", marginBottom: 16, color: s.theme.eyebrow }}>
                 {s.eyebrow}
               </div>
-              <h1 className="hero-h1" style={{ fontSize: 60, fontWeight: 900, color: "#fff", lineHeight: 1.08, marginBottom: 14 }}>
+              <h1 className="hero-h1" style={{   fontSize: 58,
+    fontWeight: 900,
+    color: "#fff",
+    lineHeight: 1.1,
+    letterSpacing: "-0.5px" }}>
+ 
                 {s.title.map((part, pi) =>
                   pi === s.accentIdx
                     ? <em key={pi} style={{ fontStyle: "normal", color: s.theme.accentLight }}>{part}</em>
@@ -198,7 +218,17 @@ export default function Hero() {
 
               <div className="hero-btns" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <button className="hero-btn-p" onClick={() => navigate(s.btn1Route)}
-                  style={{ padding: "14px 24px", borderRadius: 8, fontSize: 15, fontWeight: 700, border: "none", cursor: "pointer", color: "#fff", background: s.theme.accent, transition: "transform 0.2s,filter 0.2s", fontFamily: "inherit" }}>
+                  style={{  padding: "15px 28px",
+    borderRadius: 12,
+    fontSize: 15,
+    fontWeight: 800,
+    border: "none",
+    cursor: "pointer",
+    color: "#fff",
+background: "transparent",
+border: "2px solid #f8a264",
+color: "#f8a66c",    boxShadow: "0 10px 30px rgba(238, 151, 89, 0.35)",
+    transition: "all .3s ease", }}>
                   {s.btn1}
                 </button>
                 <button className="hero-btn-g" onClick={() => navigate(s.btn2Route)}
@@ -209,23 +239,64 @@ export default function Hero() {
             </div>
 
             {/* Right */}
-            <div className="hero-col-r" style={{ width: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div className="hero-col-r" style={{ width: "40%", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <div style={{ position: "relative", width: 230, height: 260, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ position: "absolute", inset: 0, borderRadius: "50%", background: s.theme.iconBg, boxShadow: `0 0 90px ${s.theme.glow}` }} />
+               <div
+  style={{
+    position: "absolute",
+    inset: 0,
+    borderRadius: "50%",
+    background: s.theme.iconBg,
+    boxShadow: `
+      0 0 150px ${s.theme.glow},
+      0 0 280px rgba(249,115,22,.25)
+    `,
+  }}
+/>
                 <i className={`ti ${s.icon}`} style={{ fontSize: 150, color: s.theme.icon, position: "relative", zIndex: 2 }} />
                 {s.chips.map((chip, ci) => (
-                  <div key={ci} style={{
-                    position: "absolute",
-                    ...chipPositions[chip.pos],
-                    borderRadius: 12, padding: "8px 14px",
-                    background: s.theme.chips[ci],
-                    border: "1px solid rgba(255,255,255,0.2)",
-                    backdropFilter: "blur(8px)", zIndex: 4,
-                    animation: `flt${ci} ${3 + ci * 0.4}s ease-in-out ${ci * 0.5}s infinite`,
-                  }}>
-                    <div style={{ fontSize: 24, fontWeight: 900, color: "#fff", lineHeight: 1.2 }}>{chip.val}</div>
-                    <div style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", fontWeight: 600, marginTop: 2 }}>{chip.lbl}</div>
-                  </div>
+                 <div
+  key={ci}
+  style={{
+    position: "absolute",
+    ...chipPositions[chip.pos],
+
+    borderRadius: 16,
+    padding: "10px 16px",
+
+    background: "rgba(255,255,255,0.08)",
+    backdropFilter: "blur(14px)",
+    WebkitBackdropFilter: "blur(14px)",
+
+    border: "1px solid rgba(255,255,255,0.15)",
+    boxShadow: "0 8px 30px rgba(0,0,0,0.25)",
+
+    zIndex: 4,
+    animation: `flt${ci} ${3 + ci * 0.4}s ease-in-out ${
+      ci * 0.5
+    }s infinite`,
+  }}
+>
+<div
+  style={{
+    fontSize: 26,
+    fontWeight: 900,
+    color: "#fff",
+    lineHeight: 1.2,
+  }}
+>
+  {chip.val}
+</div>    
+<div
+  style={{
+    fontSize: 11,
+    color: "rgba(255,255,255,0.75)",
+    fontWeight: 600,
+    marginTop: 2,
+  }}
+>
+  {chip.lbl}
+</div>                  </div>
                 ))}
               </div>
             </div>
@@ -249,6 +320,7 @@ export default function Hero() {
           ))}
         </div>
         <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+
           <button className="hero-arr-ghost" onClick={() => goTo((cur + slides.length - 1) % slides.length)} aria-label="Prev"
             style={{ width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, cursor: "pointer", background: "transparent", border: "1.5px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.5)", transition: "all 0.2s" }}>
             <i className="ti ti-arrow-left" />
@@ -261,9 +333,28 @@ export default function Hero() {
       </div>
 
       {/* Progress */}
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 3, background: "rgba(255,255,255,0.07)", zIndex: 20 }}>
-        <div style={{ height: "100%", width: `${progress}%`, background: t.bar, transition: "background 0.6s" }} />
-      </div>
+      <div
+  style={{
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 4,
+    background: "rgba(255,255,255,0.07)",
+    zIndex: 20,
+  }}
+>
+  <div
+    style={{
+      height: "100%",
+      width: `${progress}%`,
+      background: "linear-gradient(90deg,#f97316,#fb923c)",
+      transition: "background 0.6s",
+      boxShadow: "0 0 15px rgba(249,115,22,.5)",
+    }}
+  />
+</div>
+
     </section>
   );
 }
