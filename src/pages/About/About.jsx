@@ -220,7 +220,7 @@ It's about creating meaningful connections between your business and the people 
         <div>
           <h3>We Build Brands, Not Just Campaigns
 </h3>
-          <p>A successful business is built on trust and recognition. </p>
+          <p>A successful business is built on trust and recognition. We help you create a strong brand identity that customers remember, connect with, and choose repeatedly. </p>
         </div>
       </div>
 
