@@ -11,12 +11,31 @@ import {
   FaAd,
     FaChartLine,
 
-  FaUsers
+  
 } from "react-icons/fa";
+
+
+import {
+  FaUsers,
+  FaUserTie,
+  FaDesktop,
+  
+  FaFileAlt,
+  FaClipboardCheck,
+} from "react-icons/fa";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
   const navigate = useNavigate();
 
+useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
 
 
   const expertiseData = [
@@ -54,7 +73,38 @@ function About() {
   }
 ];
 
-
+const teamData = [
+  {
+    icon: <FaUsers />,
+    title: "Strategy & Consultation",
+    desc: "Define, Align, Elevate",
+  },
+  {
+    icon: <FaUserTie />,
+    title: "Coders & Developers",
+    desc: "Design, Develop, Launch",
+  },
+  {
+    icon: <FaDesktop />,
+    title: "Visualizers & Video",
+    desc: "Design, Motion, Impact",
+  },
+  {
+    icon: <FaBullhorn />,
+    title: "Digital Marketers",
+    desc: "Click, Reach, Grow",
+  },
+  {
+    icon: <FaFileAlt />,
+    title: "Content Creators",
+    desc: "Ideas, Words, Influence",
+  },
+  {
+    icon: <FaClipboardCheck />,
+    title: "Operations & Accounting",
+    desc: "Manage, Optimise, Compliance",
+  },
+];
 
 useEffect(() => {
   const observer = new IntersectionObserver(
@@ -91,8 +141,8 @@ useEffect(() => {
             </span>
 
             <h1>
-               About Advertising and
-              <span>  Branding Marketing
+               
+              <span>About Advertising and Branding Marketing
 </span>
             </h1>
 
@@ -124,78 +174,128 @@ useEffect(() => {
 
 
       {/* About Company */}
-   <section className="ab-about-company">
-  <div className="blue-circle-1"></div>
-  <div className="blue-circle-2"></div>
+  <section className="ab-about-company">
 
   <div className="container">
-    <div className="row align-items-center">
 
-      {/* Heading */}
-      <div className="col-12 order-1 d-lg-none text-center">
-        
+    {/* Heading */}
+    <div
+      className="about-header text-center"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >
+      <span className="ab-section-tag">
+        About Us
+      </span>
 
-        <h2>
+      <h2>
         About Advertising & Branding Marketing
+        <span> </span>
+      </h2>
+    </div>
 
-        </h2>
-      </div>
+    <div className="row align-items-start gx-5">
 
-      {/* Image */}
-      <div className="col-lg-6 order-2 order-lg-1">
-        <img
-          src={`${import.meta.env.BASE_URL}About.jpg`}
-          alt="CEO Services by AB Marketing Wings"
-          className="ab-about-img"
-        />
+      {/* Left Image */}
+      <div
+        className="col-lg-5"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+      >
+        <div className="about-image-wrapper">
 
-         {/* ADD HERE */}
-  <div className="owner-info">
-    <h4>Founder : Arti Hulle</h4>
-    <span>Founded in  2025 </span>
-  </div>
-      </div>
+          <img
+            src={`${import.meta.env.BASE_URL}About.jpg`}
+            alt="AB Marketing Wings"
+            className="ab-about-img"
+          />
 
-      {/* Content */}
-      <div className="col-lg-6 order-3 order-lg-2">
+          <div className="owner-info">
+            <h4>Arti Hulle</h4>
+            <span>Founder • 2025</span>
+          </div>
 
-        {/* Desktop Heading */}
-        <div className="d-none d-lg-block">
-         
-          <h2>
-About Advertising and Branding Marketing
-  
-       </h2>
         </div>
+      </div>
 
-      <p>
-  Every business starts with a dream.
-A dream to create something meaningful.
-A dream to serve people, solve problems, and build a legacy.
-But when the world changed in 2020, many businesses found themselves facing an unexpected challenge.
+      {/* Right Content */}
+      <div
+        className="col-lg-7 about-content"
+        data-aos="fade-left"
+        data-aos-duration="1200"
+      >
 
-</p>
+        {/* Content Heading */}
+        <h3 className="about-content-title">
+         
+          <span> Building Brands That Inspire Growth</span>
+        </h3>
 
-<p>Storefronts closed, customer interactions disappeared, and traditional ways of doing business were no longer enough.
-While some brands adapted quickly, many struggled to find their place in the digital world.
-What we witnessed during those years was powerful.
-Businesses that embraced digital platforms continued to connect with their customers, build trust, and grow despite uncertainty. Those who stayed invisible often found it difficult to survive.
-That realization sparked an idea.</p> 
+        <p>
+          Every business starts with a dream. A dream to create something
+          meaningful, serve people, solve problems, and build a legacy.
+          But when the world changed in 2020, many businesses found
+          themselves facing an unexpected challenge.
+        </p>
 
+        <p>
+          Storefronts closed, customer interactions disappeared, and
+          traditional ways of doing business were no longer enough.
+          Businesses that embraced digital platforms continued to connect
+          with customers, build trust, and grow despite uncertainty.
+          Those who stayed invisible often found it difficult to survive.
+        </p>
 
-<p>
- In 2024, A B Marketing Wings was born with a simple mission:
-To help businesses become visible, memorable, and future-ready.
-We believe every business has a unique story worth telling. 
+        <p>
+          That realization sparked an idea. In 2024, A B Marketing Wings
+          was born with a simple mission — helping businesses become
+          visible, memorable, and future-ready. We believe every business
+          has a unique story worth telling and a brand worth building.
+        </p>
 
-</p>
+        {/* Features */}
+        <div className="about-features">
 
+          <div
+            className="feature-card"
+            data-aos="flip-up"
+            data-aos-delay="100"
+          >
+             Digital Growth
+          </div>
 
+          <div
+            className="feature-card"
+            data-aos="flip-up"
+            data-aos-delay="200"
+          >
+             Brand Strategy
+          </div>
+
+          <div
+            className="feature-card"
+            data-aos="flip-up"
+            data-aos-delay="300"
+          >
+             Creative Marketing
+          </div>
+
+          <div
+            className="feature-card"
+            data-aos="flip-up"
+            data-aos-delay="400"
+          >
+            Results Driven
+          </div>
+
+        </div>
 
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 
@@ -205,7 +305,7 @@ We believe every business has a unique story worth telling.
 
     <div className="ab-why-header">
       <span>Why Choose Us</span>
-      <h2>Why Choose AB Marketing?</h2>
+      <h2>Why Choose Us</h2>
       <p>
         Digital marketing is not just about likes, followers, or running advertisements.
 It's about creating meaningful connections between your business and the people who matter most.
@@ -268,6 +368,66 @@ It's about creating meaningful connections between your business and the people 
 </section>
 
 
+{/* about team */}
+<section className="abt-team" id="about">
+      {/* Background Marquee */}
+      <div className="abt-marquee">
+        <div className="abt-track">
+          Creative Digital Branding — Creative Digital Branding —
+          Creative Digital Branding —
+        </div>
+      </div>
+
+      <div className="abt-container">
+        {/* Left Section */}
+        <div className="abt-left">
+          <span className="abt-tag">
+            Our Creative Team
+          </span>
+
+          <h2>
+            Delivering
+            
+            Branding
+            <br />
+            Excellence
+          </h2>
+
+          <p>
+            We transform ideas into compelling
+            stories that engage, inspire and
+            leave a lasting impact through
+            strategy, design, branding and
+            digital innovation.
+          </p>
+
+          <button className="abt-btn">
+            Connect With Us →
+          </button>
+        </div>
+
+        {/* Right Grid */}
+        <div className="abt-grid">
+          {teamData.map((item, index) => (
+            <div
+              className={`abt-card ${
+                index === 0 ? "active" : ""
+              }`}
+              key={index}
+            >
+              <div className="abt-icon">
+                {item.icon}
+              </div>
+
+              <div className="abt-content">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
 
 
@@ -394,10 +554,16 @@ It's about creating meaningful connections between your business and the people 
       </div>
 
     </div>
-
-  
   </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 

@@ -105,7 +105,7 @@
   display: inline-block;
   font-family: 'Urbanist', sans-serif;
 
-  color: orange; /* Black Color */
+  color: #ff7a00; /* Black Color */
 
   animation: textFloat 3s ease-in-out infinite;
   transition: 0.4s ease;
@@ -320,7 +320,21 @@
   text-decoration:none;
 }
 
+.sidebar-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
 
+.sidebar-detail-item span {
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.sidebar-icon {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
 
 /* service nav code */
 /* ===========================
@@ -348,12 +362,12 @@
 
   background: #fff;
   border-radius: 20px;
-  padding: 25px;
+  
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-
+  gap: 4px !important;        
+  padding: 14px !important;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 
   opacity: 0;
@@ -370,7 +384,33 @@
   }
 }
 
-/* Columns */
+
+
+
+/* Mobile - सगळे nav links center */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .navbar-nav .nav-link {
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  /* Services button center */
+  .navbar-nav .nav-item > div.nav-link {
+    justify-content: center !important;
+  }
+}
+
+/* Columns 
 .mega-column {
   display: flex;
   flex-direction: column;
@@ -403,7 +443,7 @@
 }
 /* ===========================
    MOBILE RESPONSIVE
-=========================== */
+=========================== 
 
 @media (max-width: 991px) {
 
@@ -661,3 +701,12 @@
 .social-icon.whatsapp  { background: #25d366; }
 .social-icon.youtube   { background: #ff0000; }
 
+/* Mobile - sidebar toggle center */
+@media (max-width: 991px) {
+  .sidebar-toggle {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 4px auto !important;
+    width: 100% !important;
+  }
+}

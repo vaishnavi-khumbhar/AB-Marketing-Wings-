@@ -47,7 +47,26 @@ function Home() {
   }
 ];
 
+// flip industries
+const industries = [
+  { label: "Automobile", icon: "ti-car", tag: "Drive & Identity" },
+  { label: "Banking Finance", icon: "ti-building-bank", tag: "Trust & Authority" },
+  { label: "Professionals", icon: "ti-briefcase", tag: "Expertise & Prestige" },
+  { label: "Education", icon: "ti-school", tag: "Learn & Inspire" },
+  { label: "Event Branding", icon: "ti-confetti", tag: "Moments & Magic" },
+  { label: "FMCG", icon: "ti-shopping-bag", tag: "Shelf & Impact" },
+  { label: "Healthcare & Pharma", icon: "ti-pill", tag: "Care & Credibility" },
+  { label: "Manufacturing", icon: "ti-tool", tag: "Build & Scale" },
+  { label: "Community Engagement", icon: "ti-users", tag: "Connect & Grow" },
+  { label: "Real Estate", icon: "ti-building-skyscraper", tag: "Space & Aspiration" },
+  { label: "Restaurants", icon: "ti-tools-kitchen-2", tag: "Flavour & Feeling" },
+  { label: "Travel & Tourism", icon: "ti-plane", tag: "Wander & Wonder" },
+];
 
+const [flipped, setFlipped] = useState({});
+
+  const toggle = (label) =>
+    setFlipped((prev) => ({ ...prev, [label]: !prev[label] }));
 
  // our client logo
  const clients = [
@@ -166,7 +185,25 @@ function Home() {
   //   return () => clearInterval(interval);
   // }, []);
 
+// BrandSection.jsx
 
+  const services = [
+    {
+      number: "01",
+      title: "Startup Branding",
+      desc: "Igniting fresh brand identities that define and distinguish new businesses confidently.",
+    },
+    {
+      number: "02",
+      title: "Transforming Brands",
+      desc: "Transforming existing brands with modern strategies for renewed relevance and impact.",
+    },
+    {
+      number: "03",
+      title: "Brand Design",
+      desc: "Crafting customized visual identities tailored to any business, sector, or need.",
+    },
+  ];
   
 
   return (
@@ -304,208 +341,107 @@ function Home() {
 
 
 
-{/* 2. RESULTS SHOWCASE */}
-<section className="stats-section" data-aos="fade-up">
+{/* 2. case study */}
+{/*case study */}
+<section className="brand-section">
+  <div className="brand-container">
 
-  <div className="container">
+    {/* LEFT */}
+    <div className="brand-left" data-aos="fade-right" data-aos-duration="800">
+      <div className="brand-badge">
+        <img
+          src={`${import.meta.env.BASE_URL}ab_logo.png`}
+          alt="logo"
+          className="badge-logo"
+        />
+        <span>Brand Loud, Stand Proud</span>
+      </div>
 
-    <div className="section-header">
-      <span className="stats-tag">Our Performance</span>
-<h2 className="orange-results-heading">
-  Our Results Speak
-</h2>
-<p className="results-subtitle">
-  Numbers don't lie. We help businesses generate more leads,
-  increase ROI and build stronger brands.
-</p>
+      <h1 className="brand-heading">
+        Building Your <br /> Brand
+      </h1>
+
+      <p className="brand-desc" data-aos="fade-up" data-aos-delay="200">
+        We craft bold, memorable brand identities that stand out
+        and speak clearly. From startups to seasoned businesses,
+        we build brands that people remember.
+      </p>
+
+     <Link
+  to="/contact"
+  className="brand-btn"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  Connect With Us →
+</Link>
+
     </div>
 
-    <div className="stats-orbit">
-
-      {/* Center Logo */}
-      <div className="center-logo">
-        <img src={`${import.meta.env.BASE_URL}ab_logo.png`} alt="AB Marketing Wings" />
-      </div>
-
-      {/* Stats Cards */}
-
-      <div className="orbit-card card1">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-          alt=""
-        />
-        <h3>100%</h3>
-        <p>Lead Growth</p>
-      </div>
-
-      <div className="orbit-card card2">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/4305/4305512.png"
-          alt=""
-        />
-        <h3>3X</h3>
-        <p>ROI Boost</p>
-      </div>
-
-      <div className="orbit-card card3">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
-          alt=""
-        />
-        <h3>50+</h3>
-        <p>Brands Scaled</p>
-      </div>
-
-      <div className="orbit-card card4">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png"
-          alt=""
-        />
-        <h3>1M+</h3>
-        <p>Ad Reach</p>
-      </div>
-
+    {/* RIGHT */}
+    <div className="brand-right">
+      {[
+        { number: "01", title: "Startup Branding", desc: "Igniting fresh brand identities that define and distinguish new businesses confidently." },
+        { number: "02", title: "Transforming Brands", desc: "Transforming existing brands with modern strategies for renewed relevance and impact." },
+        { number: "03", title: "Brand Design", desc: "Crafting customized visual identities tailored to any business, sector, or need." },
+      ].map((s, i) => (
+        <div
+          className="brand-service-item"
+          key={i}
+          data-aos="fade-up"
+          data-aos-delay={i * 200}
+          data-aos-duration="700"
+        >
+          <span className="service-number">{s.number}</span>
+          <div className="service-content">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <div className="service-line"></div>
+          </div>
+        </div>
+      ))}
     </div>
 
   </div>
-
 </section>
-
-
-{/* 3. CASE STUDY (BEFORE vs AFTER) */}
-<section className="case-section" data-aos="fade-up">
-  <div className="blue-blob blob1"></div>
-  <div className="blue-blob blob2"></div>
-
-  <div className="container">
-
-    {/* SECTION HEADER */}
-    <div className="case-header">
-      <span className="case-tag">Growth Strategy</span>
-
-      <h2 className="case-title">
-        Digital Marketing Framework
-      </h2>
-
-      <p className="case-subtitle">
-        A powerful combination of Google Ads, Meta Ads, Content Creation,
-        UGC Video Shoots, Influencer Marketing and Social Media Management
-        designed to generate leads, increase visibility and accelerate business growth.
-      </p>
-    </div>
-
-    {/* CASE STUDY */}
-    <div className="case-story" data-aos="zoom-in">
-
-      <div className="clinic-logo">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"
-          alt="Varad Skincare Clinic"
-        />
-      </div>
-
-      <h3>Case Study: Varad Skincare Clinic</h3>
-
-      <p>
-        We partnered with <b>Varad Skincare Clinic, Sambhaji Nagar</b> to
-        transform their digital presence and drive real business growth through
-        Meta Ads, content marketing and strategic branding.
-      </p>
-
-      {/* STRATEGY CARDS */}
-   <div className="case-highlights">
-
-  <div className="highlight-card">
-    <span className="highlight-tag">ADS</span>
-    <p>Google Ads Campaign Management</p>
-  </div>
-
-  <div className="highlight-card">
-    <span className="highlight-tag">LEAD GENERATION</span>
-    <p>Meta Ads Lead Generation</p>
-  </div>
-
-  <div className="highlight-card">
-    <span className="highlight-tag">VIDEO PRODUCTION</span>
-    <p>UGC Video Shoot & Production</p>
-  </div>
-
-  <div className="highlight-card">
-    <span className="highlight-tag">CONTENT CREATION</span>
-    <p>Creative Content Creation</p>
-  </div>
-
-  <div className="highlight-card">
-    <span className="highlight-tag">INFLUENCER</span>
-    <p>Influencer Marketing</p>
-  </div>
-
-  <div className="highlight-card">
-    <span className="highlight-tag">SOCIAL MEDIA</span>
-    <p>Social Media Management</p>
-  </div>
-
-</div>
-
-      <p>
-        By combining performance marketing, content creation, UGC videos,
-        influencer collaborations and strategic branding, we positioned
-        the clinic as a trusted skincare brand while generating consistent
-        engagement, inquiries and business growth.
-      </p>
-
-    </div>
     
 
-    {/* RESULTS */}
-    <div className="vs-divider">
-      <span>RESULTS DELIVERED</span>
+{/* 3. flip industris  */}
+  <div className="wrap">
+      <div className="top">
+        <div className="eyebrow">What We Do</div>
+        <h2 className="title">Brand Creation Across<br /><em>Diverse Industries.</em></h2>
+        <div className="divider">
+          <span /><i className="ti ti-flame" /><span />
+        </div>
+      </div>
+
+      <div className="grid">
+        {industries.map((item, i) => (
+          <div
+            key={item.label}
+            className={`flip-wrap ${flipped[item.label] ? "active" : ""}`}
+            style={{ animationDelay: `${0.04 + i * 0.04}s` }}
+            onClick={() => toggle(item.label)}
+          >
+            <div className="flip-inner">
+              <div className="face front">
+                <div className="icon-ring">
+                  <i className={`ti ${item.icon}`} aria-hidden="true" />
+                </div>
+                <span className="front-lbl">{item.label}</span>
+              </div>
+              <div className="face back">
+                <i className={`ti ${item.icon} back-icon`} aria-hidden="true" />
+                <span className="back-lbl">{item.label}</span>
+                <span className="back-tag">{item.tag}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="hint"><i className="ti ti-hand-finger" /> Hover to flip</p>
     </div>
-
-    <div className="case-grid">
-
-      {/* BEFORE */}
-      <div className="case-card before" data-aos="fade-right">
-  <div className="status-icon">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"
-      alt="Before"
-    />
-  </div>
-
-  <h3>Before Growth Strategy</h3>
-
-  <div className="case-content">
-    <div className="case-item">Low brand visibility</div>
-    <div className="case-item">Limited customer reach</div>
-    <div className="case-item">Inactive social presence</div>
-    <div className="case-item">Fewer quality leads</div>
-  </div>
-</div>
-
-<div className="case-card after" data-aos="fade-left">
-  <div className="status-icon">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
-      alt="After"
-    />
-  </div>
-
-  <h3>After Our Strategy</h3>
-
-  <div className="case-content">
-    <div className="case-item">Stronger market presence</div>
-    <div className="case-item">Wider audience reach</div>
-    <div className="case-item">Higher engagement rates</div>
-    <div className="case-item">Consistent lead generation</div>
-  </div>
-</div>
-    </div>
-
-
-  </div>
-</section>
-
 
 
 {/* 4 services */}
@@ -612,8 +548,7 @@ function Home() {
     <h3>Video Editing</h3>
 
     <p>
-      High-impact videos and content designed to capture attention and boost engagement.
-    </p>
+High-impact videos and content designed to capture attention and boost engagement, conversions, and growth.    </p>
 
     <Link
       to="/services"
@@ -633,8 +568,8 @@ function Home() {
 
 
 
-{
-/*  6 our client logos */}
+
+{/*  6 our client logos */}
 <section className="clients-section">
 
    <span className="client-tag">Our Clients</span>
@@ -663,9 +598,7 @@ function Home() {
 
   
      <section className="cta-section">
-      <div className="cta-circle cta-circle-1"></div>
-<div className="cta-circle cta-circle-2"></div>
-<div className="cta-circle cta-circle-3"></div>
+    
 
       <div className="cta-content">
 
@@ -809,8 +742,7 @@ function Home() {
 {/* 8. FREE AUDIT BOX */}
 
     <section className="audit-section">
-      <div className="audit-spot audit-spot-1"></div>
-<div className="audit-spot audit-spot-2"></div>
+     
 
       <div className="audit-glow glow1"></div>
       <div className="audit-glow glow2"></div>
